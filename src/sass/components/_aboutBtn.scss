@@ -1,0 +1,43 @@
+.AboutBtn {
+  position: fixed;
+  z-index: 1;
+  top: 30px;
+  right: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  mix-blend-mode: difference;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.3s;
+    font-size: 18px;
+    will-change: transform;
+  }
+
+  &::before {
+    content: "(";
+    left: -40%;
+  }
+  &::after {
+    content: ")";
+    right: -40%;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::after {
+      transform: translate(-150%, -50%);
+      opacity: 1;
+    }
+    &::before {
+      opacity: 1;
+      transform: translate(150%, -50%);
+    }
+  }
+}

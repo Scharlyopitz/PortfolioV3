@@ -34,6 +34,45 @@ html.lenis body {
   pointer-events: none;
 }
 
+.AboutBtn {
+  position: fixed;
+  z-index: 1;
+  top: 30px;
+  right: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  mix-blend-mode: difference;
+}
+.AboutBtn::before, .AboutBtn::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.3s;
+  font-size: 18px;
+  will-change: transform;
+}
+.AboutBtn::before {
+  content: "(";
+  left: -40%;
+}
+.AboutBtn::after {
+  content: ")";
+  right: -40%;
+}
+.AboutBtn:hover {
+  cursor: pointer;
+}
+.AboutBtn:hover::after {
+  transform: translate(-150%, -50%);
+  opacity: 1;
+}
+.AboutBtn:hover::before {
+  opacity: 1;
+  transform: translate(150%, -50%);
+}
+
 .ProjetsContainer .Projet {
   position: relative;
   display: flex;

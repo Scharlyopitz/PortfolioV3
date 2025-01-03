@@ -20,6 +20,7 @@ export default function App() {
 
   return (
     <main>
+      <span className="AboutBtn">About</span>
       <Background />
       <Projets />
     </main>

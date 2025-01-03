@@ -1,15 +1,9 @@
-import Projets from "../src/assets/Projets.json";
+import Projets from "./components/Projets";
 
 export default function App() {
   return (
     <main>
-      {Projets.map((projet, i) => {
-        return (
-          <div key={i} className="image">
-            <img src={projet.image} alt={projet.name} />
-          </div>
-        );
-      })}
+      <Projets />
     </main>
   );
 }

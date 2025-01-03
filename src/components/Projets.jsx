@@ -9,7 +9,10 @@ export default function Projets() {
             <div className="image">
               <img src={projet.image} alt={projet.name} />
             </div>
-            <h1>{projet.name}</h1>
+            <div className="titleContainer">
+              <h1>0{i + 1}</h1>
+              <h1>{projet.name}</h1>
+            </div>
           </div>
         );
       })}

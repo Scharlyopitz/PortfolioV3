@@ -1,7 +1,32 @@
 .ProjetsContainer {
   .Projet {
+    position: relative;
+    display: flex;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .titleContainer {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .titleContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      width: 50%;
+      padding: 2vw;
+
+      h1 {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 3vw;
+      }
+    }
+
     .image {
-      width: 100vw;
+      width: 50%;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -10,12 +35,8 @@
         cursor: pointer;
       }
 
-      // &:nth-child(even) {
-      //   justify-content: end;
-      // }
-
       img {
-        width: 50%;
+        width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;

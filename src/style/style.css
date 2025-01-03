@@ -6,7 +6,7 @@
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   font-family: "Urbanist";
   color: #ffffff;
@@ -34,8 +34,30 @@ html.lenis body {
   pointer-events: none;
 }
 
+.ProjetsContainer .Projet {
+  position: relative;
+  display: flex;
+}
+.ProjetsContainer .Projet:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.ProjetsContainer .Projet:nth-child(even) .titleContainer {
+  flex-direction: row-reverse;
+}
+.ProjetsContainer .Projet .titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 50%;
+  padding: 2vw;
+}
+.ProjetsContainer .Projet .titleContainer h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3vw;
+}
 .ProjetsContainer .Projet .image {
-  width: 100vw;
+  width: 50%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -44,7 +66,7 @@ html.lenis body {
   cursor: pointer;
 }
 .ProjetsContainer .Projet .image img {
-  width: 50%;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;

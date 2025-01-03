@@ -2,7 +2,7 @@ import ProjetsData from "../assets/Projets.json";
 
 export default function Projets() {
   return (
-    <>
+    <div className="ProjetsContainer">
       {ProjetsData.map((projet, i) => {
         return (
           <div key={i} className="image">
@@ -10,6 +10,6 @@ export default function Projets() {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }

@@ -34,23 +34,16 @@ html.lenis body {
   pointer-events: none;
 }
 
-.ProjetsContainer .image {
+.ProjetsContainer .Projet .image {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
-  filter: grayscale(1);
-  transition: filter 0.5s;
-  will-change: filter;
 }
-.ProjetsContainer .image:hover {
-  filter: grayscale(0);
+.ProjetsContainer .Projet .image:hover {
   cursor: pointer;
 }
-.ProjetsContainer .image:nth-child(even) {
-  justify-content: end;
-}
-.ProjetsContainer .image img {
+.ProjetsContainer .Projet .image img {
   width: 50%;
   height: 100%;
   -o-object-fit: cover;

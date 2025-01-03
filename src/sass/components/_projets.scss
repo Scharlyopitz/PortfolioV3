@@ -1,27 +1,25 @@
 .ProjetsContainer {
-  .image {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    filter: grayscale(1);
-    transition: filter 0.5s;
-    will-change: filter;
+  .Projet {
+    .image {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
 
-    &:hover {
-      filter: grayscale(0);
-      cursor: pointer;
-    }
+      &:hover {
+        cursor: pointer;
+      }
 
-    &:nth-child(even) {
-      justify-content: end;
-    }
+      // &:nth-child(even) {
+      //   justify-content: end;
+      // }
 
-    img {
-      width: 50%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+      img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
 }

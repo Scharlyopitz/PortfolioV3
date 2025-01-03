@@ -5,8 +5,11 @@ export default function Projets() {
     <div className="ProjetsContainer">
       {ProjetsData.map((projet, i) => {
         return (
-          <div key={i} className="image">
-            <img src={projet.image} alt={projet.name} />
+          <div key={i} className="Projet">
+            <div className="image">
+              <img src={projet.image} alt={projet.name} />
+            </div>
+            <h1>{projet.name}</h1>
           </div>
         );
       })}

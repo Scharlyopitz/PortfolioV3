@@ -52,7 +52,7 @@ html.lenis body {
   justify-content: space-between;
   align-items: end;
   width: 50%;
-  padding: 2vw;
+  padding: 1vw 2vw;
 }
 .ProjetsContainer .Projet .titleContainer h1 {
   text-transform: uppercase;

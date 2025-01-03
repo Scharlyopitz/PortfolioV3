@@ -14,14 +14,22 @@ body {
 }
 
 .ProjetsContainer .image {
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  filter: grayscale(1);
+}
+.ProjetsContainer .image:nth-child(even) {
+  justify-content: end;
 }
 .ProjetsContainer .image img {
-  width: 100%;
+  width: 50%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .Background {

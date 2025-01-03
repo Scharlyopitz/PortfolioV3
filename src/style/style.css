@@ -40,6 +40,12 @@ html.lenis body {
   display: flex;
   align-items: center;
   filter: grayscale(1);
+  transition: filter 0.5s;
+  will-change: filter;
+}
+.ProjetsContainer .image:hover {
+  filter: grayscale(0);
+  cursor: pointer;
 }
 .ProjetsContainer .image:nth-child(even) {
   justify-content: end;

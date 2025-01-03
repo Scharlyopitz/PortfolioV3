@@ -5,6 +5,13 @@
     display: flex;
     align-items: center;
     filter: grayscale(1);
+    transition: filter 0.5s;
+    will-change: filter;
+
+    &:hover {
+      filter: grayscale(0);
+      cursor: pointer;
+    }
 
     &:nth-child(even) {
       justify-content: end;

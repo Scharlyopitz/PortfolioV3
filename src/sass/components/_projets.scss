@@ -3,6 +3,10 @@
     position: relative;
     display: flex;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &:nth-child(even) {
       flex-direction: row-reverse;
 
@@ -30,10 +34,6 @@
       height: 100vh;
       display: flex;
       align-items: center;
-
-      &:hover {
-        cursor: pointer;
-      }
 
       img {
         width: 100%;

@@ -38,6 +38,9 @@ html.lenis body {
   position: relative;
   display: flex;
 }
+.ProjetsContainer .Projet:hover {
+  cursor: pointer;
+}
 .ProjetsContainer .Projet:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -61,9 +64,6 @@ html.lenis body {
   height: 100vh;
   display: flex;
   align-items: center;
-}
-.ProjetsContainer .Projet .image:hover {
-  cursor: pointer;
 }
 .ProjetsContainer .Projet .image img {
   width: 100%;

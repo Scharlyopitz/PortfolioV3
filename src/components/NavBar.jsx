@@ -8,7 +8,7 @@ export default function NavBar() {
         <img src={Logo} alt="logo" />
       </Link>
       <Link to="/apropos" className="AboutBtn">
-        About
+        A propos
       </Link>
     </nav>
   );

@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import AproposData from "../assets/AproposData.json";
+import TitlePage from "../components/TitlePage";
 
 export default function Apropos() {
   const githubLink = "https://github.com/Scharlyopitz";
   const instagramLink = "https://www.instagram.com/s.optz/?hl=fr";
   return (
     <main id="Apropos">
+      <TitlePage title="A propos" />
       <div className="descriptionContainer">
         {AproposData[0].split(" ").map((word, i) => {
           return <p key={i}>{word}</p>;

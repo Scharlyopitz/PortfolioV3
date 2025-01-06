@@ -4,4 +4,11 @@
   //   left: 0;
   //   width: 100vw;
   //   height: 100vh;
+
+  .right {
+    flex-direction: row-reverse;
+    .titleContainer {
+      flex-direction: row-reverse;
+    }
+  }
 }

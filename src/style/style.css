@@ -143,17 +143,17 @@ nav .AboutBtn:hover::before {
      object-position: center;
 }
 
-.right {
-  flex-direction: row-reverse;
-}
-.right .titleContainer {
-  flex-direction: row-reverse;
-}
-
 .Background {
   background: linear-gradient(235deg, #0a0909, #212121);
   position: fixed;
   z-index: -1;
   width: 100vw;
   height: 100vh;
+}
+
+#Projet .right {
+  flex-direction: row-reverse;
+}
+#Projet .right .titleContainer {
+  flex-direction: row-reverse;
 }/*# sourceMappingURL=style.css.map */

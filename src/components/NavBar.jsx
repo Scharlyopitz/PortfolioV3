@@ -7,7 +7,9 @@ export default function NavBar() {
       <Link to="/" className="logoContainer">
         <img src={Logo} alt="logo" />
       </Link>
-      <span className="AboutBtn">About</span>
+      <Link to="/apropos" className="AboutBtn">
+        About
+      </Link>
     </nav>
   );
 }

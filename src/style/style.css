@@ -22,6 +22,10 @@ a {
   color: inherit;
 }
 
+p {
+  font-size: 1.1vw;
+}
+
 html.lenis,
 html.lenis body {
   height: auto;
@@ -164,7 +168,6 @@ nav .AboutBtn:hover::before {
   left: 55vw;
   transform: translateY(-50%);
   width: 40%;
-  font-size: 1.1vw;
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 10px;

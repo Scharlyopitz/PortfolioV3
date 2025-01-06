@@ -1,6 +1,5 @@
 [
   {
-    "id": "1",
     "name": "Wilhelm Opitz",
     "linkPath": "wilhelm-opitz",
     "rightTemplate": false,
@@ -17,7 +16,6 @@
     "liens": { "site": "https://wilhelmopitz.netlify.app/" }
   },
   {
-    "id": "2",
     "name": "Booki",
     "linkPath": "booki",
     "rightTemplate": true,
@@ -36,7 +34,6 @@
     }
   },
   {
-    "id": "3",
     "name": "OhmyFood",
     "linkPath": "ohmyfood",
     "rightTemplate": false,
@@ -55,7 +52,6 @@
     }
   },
   {
-    "id": "4",
     "name": "Sophie Bluel",
     "linkPath": "sophie-bluel",
     "rightTemplate": true,
@@ -76,7 +72,6 @@
     }
   },
   {
-    "id": "5",
     "name": "Kasa",
     "linkPath": "kasa",
     "rightTemplate": false,
@@ -95,7 +90,6 @@
     }
   },
   {
-    "id": "6",
     "name": "Nina Carducci",
     "linkPath": "nina-carducci",
     "rightTemplate": true,

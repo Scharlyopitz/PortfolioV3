@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import Background from "../components/Background";
 import TitlePage from "../components/TitlePage";
 import NavBar from "../components/NavBar";
+import { faRightLong } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Projet() {
   const { projet } = useParams();
@@ -20,7 +22,10 @@ export default function Projet() {
           <img src={rightProject.image} alt={rightProject.name} />
         </div>
         <div className="titleContainer">
-          <h1>0{rightProject.id}</h1>
+          <div className="siteBtn">
+            <span>voir site</span>
+            <FontAwesomeIcon icon={faRightLong} />
+          </div>
           <h1>{rightProject.name}</h1>
         </div>
       </div>

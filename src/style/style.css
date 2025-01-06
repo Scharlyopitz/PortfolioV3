@@ -151,6 +151,23 @@ nav .AboutBtn:hover::before {
   height: 100vh;
 }
 
+#Projet .Projet:hover {
+  cursor: auto;
+}
+#Projet .Projet .titleContainer .siteBtn {
+  display: flex;
+  flex-direction: column;
+  font-size: 1vw;
+  align-items: start;
+  text-transform: uppercase;
+}
+#Projet .Projet .titleContainer .siteBtn svg {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: transform;
+}
+#Projet .Projet .titleContainer .siteBtn:hover svg {
+  transform: translate(335%);
+}
 #Projet .right {
   flex-direction: row-reverse;
 }

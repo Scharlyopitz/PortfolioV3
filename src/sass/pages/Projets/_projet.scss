@@ -4,6 +4,31 @@
   //   left: 0;
   //   width: 100vw;
   //   height: 100vh;
+  .Projet {
+    &:hover {
+      cursor: auto;
+    }
+    .titleContainer {
+      .siteBtn {
+        display: flex;
+        flex-direction: column;
+        font-size: 1vw;
+        align-items: start;
+        text-transform: uppercase;
+
+        svg {
+          transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+          will-change: transform;
+        }
+
+        &:hover {
+          svg {
+            transform: translate(335%);
+          }
+        }
+      }
+    }
+  }
 
   .right {
     flex-direction: row-reverse;

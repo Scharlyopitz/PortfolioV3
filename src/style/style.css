@@ -165,9 +165,9 @@ nav .AboutBtn:hover::before {
 #Projet .Projet .description {
   position: absolute;
   top: 50%;
-  left: 55vw;
+  left: 52vw;
   transform: translateY(-50%);
-  width: 40%;
+  width: 46%;
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 10px;
@@ -194,7 +194,7 @@ nav .AboutBtn:hover::before {
   flex-direction: row-reverse;
 }
 #Projet .right .description {
-  left: 5vw;
+  left: 2vw;
   transform: translateY(-50%);
   flex-direction: row;
 }

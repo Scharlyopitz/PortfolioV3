@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProjetsData from "../assets/Projets.json";
 
 export default function Projets() {
@@ -5,7 +6,7 @@ export default function Projets() {
     <div className="ProjetsContainer">
       {ProjetsData.map((projet, i) => {
         return (
-          <div key={i} className="Projet">
+          <Link key={i} to={projet.link} className="Projet">
             <div className="image">
               <img src={projet.image} alt={projet.name} />
             </div>
@@ -13,7 +14,7 @@ export default function Projets() {
               <h1>0{i + 1}</h1>
               <h1>{projet.name}</h1>
             </div>
-          </div>
+          </Link>
         );
       })}
     </div>

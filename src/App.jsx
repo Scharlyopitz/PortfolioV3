@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import Projet from "./pages/Projet";
 
 export default function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/:projet" element={<Projet />} />
     </Routes>
   );
 }

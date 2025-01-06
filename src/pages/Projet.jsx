@@ -11,7 +11,7 @@ export default function Projet() {
   const rightProject = Projets.find((p) => p.linkPath === projet);
 
   return (
-    <main>
+    <main id="Projet">
       <NavBar />
       <TitlePage title={rightProject.name} />
       <Background />

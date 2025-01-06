@@ -197,4 +197,9 @@ nav .AboutBtn:hover::before {
   left: 5vw;
   transform: translateY(-50%);
   flex-direction: row;
+}
+
+#Apropos .descriptionContainer {
+  display: flex;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */

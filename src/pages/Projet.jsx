@@ -1,6 +1,6 @@
 import React from "react";
 import Projets from "../assets/Projets.json";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import TitlePage from "../components/TitlePage";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,10 +23,10 @@ export default function Projet() {
           })}
         </div>
         <div className="titleContainer">
-          <div className="siteBtn">
+          <Link to={rightProject.lien} target="_blank" className="siteBtn">
             <span>voir site</span>
             <FontAwesomeIcon icon={faRightLong} />
-          </div>
+          </Link>
           <h1>{rightProject.name}</h1>
         </div>
       </div>

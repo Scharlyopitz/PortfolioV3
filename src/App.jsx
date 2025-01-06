@@ -3,6 +3,7 @@ import Lenis from "lenis";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Projet from "./pages/Projet";
+import Apropos from "./pages/Apropos";
 
 export default function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/:projet" element={<Projet />} />
+      <Route path="/apropos" element={<Apropos />} />
     </Routes>
   );
 }

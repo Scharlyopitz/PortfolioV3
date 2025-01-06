@@ -39,17 +39,42 @@ html.lenis body {
   pointer-events: none;
 }
 
-.AboutBtn {
+nav {
   position: fixed;
   z-index: 1;
-  top: 30px;
-  right: 40px;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+  pointer-events: none;
+}
+nav .logoContainer,
+nav .AboutBtn {
+  pointer-events: all;
+}
+nav .logoContainer {
+  width: 60px;
+}
+nav .logoContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+nav .AboutBtn {
+  position: relative;
+  z-index: 5;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 18px;
-  mix-blend-mode: difference;
 }
-.AboutBtn::before, .AboutBtn::after {
+nav .AboutBtn::before, nav .AboutBtn::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -58,22 +83,22 @@ html.lenis body {
   font-size: 18px;
   will-change: transform;
 }
-.AboutBtn::before {
+nav .AboutBtn::before {
   content: "(";
   left: -40%;
 }
-.AboutBtn::after {
+nav .AboutBtn::after {
   content: ")";
   right: -40%;
 }
-.AboutBtn:hover {
+nav .AboutBtn:hover {
   cursor: pointer;
 }
-.AboutBtn:hover::after {
+nav .AboutBtn:hover::after {
   transform: translate(-150%, -50%);
   opacity: 1;
 }
-.AboutBtn:hover::before {
+nav .AboutBtn:hover::before {
   opacity: 1;
   transform: translate(150%, -50%);
 }

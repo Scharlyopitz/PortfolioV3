@@ -1,10 +1,11 @@
 import Background from "../components/Background";
+import NavBar from "../components/NavBar";
 import Projets from "../components/Projets";
 
 export default function Home() {
   return (
     <main>
-      <span className="AboutBtn">About</span>
+      <NavBar />
       <Background />
       <Projets />
     </main>

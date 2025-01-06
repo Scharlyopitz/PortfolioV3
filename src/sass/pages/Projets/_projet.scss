@@ -8,6 +8,16 @@
     &:hover {
       cursor: auto;
     }
+
+    .description {
+      position: absolute;
+      top: 50%;
+      left: 52vw;
+      transform: translateY(-50%);
+      width: 45%;
+      font-size: 1.2vw;
+    }
+
     .titleContainer {
       .siteBtn {
         display: flex;
@@ -32,8 +42,14 @@
 
   .right {
     flex-direction: row-reverse;
+
     .titleContainer {
       flex-direction: row-reverse;
+    }
+
+    .description {
+      left: 2vw;
+      transform: translateY(-50%);
     }
   }
 }

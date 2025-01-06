@@ -154,6 +154,14 @@ nav .AboutBtn:hover::before {
 #Projet .Projet:hover {
   cursor: auto;
 }
+#Projet .Projet .description {
+  position: absolute;
+  top: 50%;
+  left: 52vw;
+  transform: translateY(-50%);
+  width: 45%;
+  font-size: 1.2vw;
+}
 #Projet .Projet .titleContainer .siteBtn {
   display: flex;
   flex-direction: column;
@@ -173,4 +181,8 @@ nav .AboutBtn:hover::before {
 }
 #Projet .right .titleContainer {
   flex-direction: row-reverse;
+}
+#Projet .right .description {
+  left: 2vw;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */

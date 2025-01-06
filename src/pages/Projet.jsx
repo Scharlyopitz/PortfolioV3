@@ -21,6 +21,9 @@ export default function Projet() {
         <div className="image">
           <img src={rightProject.image} alt={rightProject.name} />
         </div>
+        <div className={`description ${rightProject.rightTemplate && "right"}`}>
+          <p>{rightProject.description}</p>
+        </div>
         <div className="titleContainer">
           <div className="siteBtn">
             <span>voir site</span>

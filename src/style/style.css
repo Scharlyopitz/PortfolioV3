@@ -201,6 +201,7 @@ nav .AboutBtn:hover::before {
 
 #Apropos .descriptionContainer {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   gap: 10px;
   padding: 30px 2vw 0 36%;
@@ -208,4 +209,50 @@ nav .AboutBtn:hover::before {
 #Apropos .descriptionContainer p {
   font-size: 1.5vw;
   line-height: 1.2vw;
+}
+#Apropos .contactContainer {
+  position: absolute;
+  left: 36%;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 62%;
+}
+#Apropos .contactContainer .left {
+  display: flex;
+  gap: 2vw;
+}
+#Apropos .contactContainer .left a {
+  position: relative;
+  z-index: 5;
+  text-transform: uppercase;
+  font-size: 1.1vw;
+}
+#Apropos .contactContainer .left a::before, #Apropos .contactContainer .left a::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.3s;
+  font-size: 1.1vw;
+  will-change: transform;
+}
+#Apropos .contactContainer .left a::before {
+  content: "(";
+  left: -20%;
+}
+#Apropos .contactContainer .left a::after {
+  content: ")";
+  right: -20%;
+}
+#Apropos .contactContainer .left a:hover {
+  cursor: pointer;
+}
+#Apropos .contactContainer .left a:hover::after {
+  transform: translate(-90%, -50%);
+  opacity: 1;
+}
+#Apropos .contactContainer .left a:hover::before {
+  opacity: 1;
+  transform: translate(90%, -50%);
 }/*# sourceMappingURL=style.css.map */

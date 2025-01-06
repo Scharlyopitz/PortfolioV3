@@ -17,6 +17,10 @@ export default function Projet() {
         <div className="image">
           <img src={rightProject.image} alt={rightProject.name} />
         </div>
+        <div className="index">
+          <span>index </span>
+          <span>/ 0{rightProject.id}</span>
+        </div>
         <div className={`description ${rightProject.rightTemplate && "right"}`}>
           {rightProject.description.split(" ").map((word, i) => {
             return <p key={i}>{word}</p>;

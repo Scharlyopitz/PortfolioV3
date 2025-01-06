@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "name": "Wilhelm Opitz",
     "linkPath": "wilhelm-opitz",
     "rightTemplate": false,
@@ -8,6 +9,7 @@
     "lien": "https://wilhelmopitz.netlify.app/"
   },
   {
+    "id": "2",
     "name": "Booki",
     "linkPath": "booki",
     "rightTemplate": true,
@@ -16,6 +18,7 @@
     "lien": "https://scharlyopitz.github.io/Projet-Booki/"
   },
   {
+    "id": "3",
     "name": "OhmyFood",
     "linkPath": "ohmyfood",
     "rightTemplate": false,
@@ -24,6 +27,7 @@
     "lien": "https://scharlyopitz.github.io/Ohmyfood/"
   },
   {
+    "id": "4",
     "name": "Sophie Bluel",
     "linkPath": "sophie-bluel",
     "rightTemplate": true,
@@ -32,6 +36,7 @@
     "lien": "https://github.com/Scharlyopitz/Projet-6-Creez-une-page-web-dynamique-avec-JavaScript"
   },
   {
+    "id": "5",
     "name": "Kasa",
     "linkPath": "kasa",
     "rightTemplate": false,
@@ -40,6 +45,7 @@
     "lien": "https://github.com/Scharlyopitz/Projet-Kasa-OpenClassroom"
   },
   {
+    "id": "6",
     "name": "Nina Carducci",
     "linkPath": "nina-carducci",
     "rightTemplate": true,

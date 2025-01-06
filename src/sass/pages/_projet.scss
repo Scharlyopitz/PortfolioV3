@@ -9,6 +9,21 @@
       cursor: auto;
     }
 
+    .index {
+      position: absolute;
+      left: 52vw;
+      top: 2.2vw;
+
+      span {
+        font-size: 1vw;
+        text-transform: uppercase;
+
+        &:nth-child(2) {
+          opacity: 0.5;
+        }
+      }
+    }
+
     .description {
       position: absolute;
       top: 50%;
@@ -53,6 +68,10 @@
       left: 2vw;
       transform: translateY(-50%);
       flex-direction: row;
+    }
+
+    .index {
+      left: 43.3vw;
     }
   }
 }

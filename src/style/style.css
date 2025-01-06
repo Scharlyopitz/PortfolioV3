@@ -162,6 +162,18 @@ nav .AboutBtn:hover::before {
 #Projet .Projet:hover {
   cursor: auto;
 }
+#Projet .Projet .index {
+  position: absolute;
+  left: 52vw;
+  top: 2.2vw;
+}
+#Projet .Projet .index span {
+  font-size: 1vw;
+  text-transform: uppercase;
+}
+#Projet .Projet .index span:nth-child(2) {
+  opacity: 0.5;
+}
 #Projet .Projet .description {
   position: absolute;
   top: 50%;
@@ -197,6 +209,9 @@ nav .AboutBtn:hover::before {
   left: 2vw;
   transform: translateY(-50%);
   flex-direction: row;
+}
+#Projet .right .index {
+  left: 43.3vw;
 }
 
 #Apropos .descriptionContainer {

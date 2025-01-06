@@ -22,7 +22,9 @@ export default function Projet() {
           <img src={rightProject.image} alt={rightProject.name} />
         </div>
         <div className={`description ${rightProject.rightTemplate && "right"}`}>
-          <p>{rightProject.description}</p>
+          {rightProject.description.split(" ").map((word, i) => {
+            return <p key={i}>{word}</p>;
+          })}
         </div>
         <div className="titleContainer">
           <div className="siteBtn">

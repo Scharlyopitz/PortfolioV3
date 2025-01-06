@@ -12,10 +12,13 @@
     .description {
       position: absolute;
       top: 50%;
-      left: 52vw;
+      left: 55vw;
       transform: translateY(-50%);
-      width: 45%;
-      font-size: 1.2vw;
+      width: 40%;
+      font-size: 1.1vw;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 10px;
     }
 
     .titleContainer {
@@ -48,8 +51,9 @@
     }
 
     .description {
-      left: 2vw;
+      left: 5vw;
       transform: translateY(-50%);
+      flex-direction: row;
     }
   }
 }

@@ -1,7 +1,9 @@
 [
   {
+    "id": "1",
     "name": "Wilhelm Opitz",
     "linkPath": "wilhelm-opitz",
+    "rightTemplate": false,
     "image": "/Wilhelm.webp",
     "description": [
       "Portfolio d'un graphiste, Wilhelm Opitz",
@@ -15,8 +17,10 @@
     "liens": { "site": "https://wilhelmopitz.netlify.app/" }
   },
   {
+    "id": "2",
     "name": "Booki",
     "linkPath": "booki",
+    "rightTemplate": true,
     "image": "/Booki.jpg",
     "description": [
       "Booki - un projet de formation réalisé à",
@@ -32,8 +36,10 @@
     }
   },
   {
+    "id": "3",
     "name": "OhmyFood",
     "linkPath": "ohmyfood",
+    "rightTemplate": false,
     "image": "/Ohmyfood.jpg",
     "description": [
       "OhMyFood - un projet de formation réalisé",
@@ -49,8 +55,10 @@
     }
   },
   {
+    "id": "4",
     "name": "Sophie Bluel",
     "linkPath": "sophie-bluel",
+    "rightTemplate": true,
     "image": "/SophieBluel.webp",
     "description": [
       "Sophie Bluel - Portfolio - un projet de",
@@ -68,8 +76,10 @@
     }
   },
   {
+    "id": "5",
     "name": "Kasa",
     "linkPath": "kasa",
+    "rightTemplate": false,
     "image": "/Kasa.png",
     "description": [
       "Kasa - un projet de formation réalisé à",
@@ -85,8 +95,10 @@
     }
   },
   {
+    "id": "6",
     "name": "Nina Carducci",
     "linkPath": "nina-carducci",
+    "rightTemplate": true,
     "image": "/Projet9.webp",
     "description": [
       "Ninna Carducci - un projet de formation",

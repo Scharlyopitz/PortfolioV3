@@ -103,44 +103,51 @@ nav .AboutBtn:hover::before {
   transform: translate(150%, -50%);
 }
 
-.ProjetsContainer .Projet {
+.Projet {
   position: relative;
   display: flex;
 }
-.ProjetsContainer .Projet:hover {
+.Projet:hover {
   cursor: pointer;
 }
-.ProjetsContainer .Projet:nth-child(even) {
+.Projet:nth-child(even) {
   flex-direction: row-reverse;
 }
-.ProjetsContainer .Projet:nth-child(even) .titleContainer {
+.Projet:nth-child(even) .titleContainer {
   flex-direction: row-reverse;
 }
-.ProjetsContainer .Projet .titleContainer {
+.Projet .titleContainer {
   display: flex;
   justify-content: space-between;
   align-items: end;
   width: 50%;
   padding: 1vw 2vw;
 }
-.ProjetsContainer .Projet .titleContainer h1 {
+.Projet .titleContainer h1 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 3vw;
 }
-.ProjetsContainer .Projet .image {
+.Projet .image {
   width: 50%;
   height: 100vh;
   display: flex;
   align-items: center;
 }
-.ProjetsContainer .Projet .image img {
+.Projet .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+.right .titleContainer {
+  flex-direction: row-reverse;
 }
 
 .Background {

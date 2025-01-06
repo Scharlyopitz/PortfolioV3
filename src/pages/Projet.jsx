@@ -15,7 +15,15 @@ export default function Projet() {
       <NavBar />
       <TitlePage title={rightProject.name} />
       <Background />
-      <h1>Bienvenue sur le projet {rightProject.name}</h1>
+      <div className={`Projet ${rightProject.rightTemplate && "right"}`}>
+        <div className="image">
+          <img src={rightProject.image} alt={rightProject.name} />
+        </div>
+        <div className="titleContainer">
+          <h1>0{rightProject.id}</h1>
+          <h1>{rightProject.name}</h1>
+        </div>
+      </div>
     </main>
   );
 }

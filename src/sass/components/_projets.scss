@@ -1,46 +1,51 @@
-.ProjetsContainer {
-  .Projet {
-    position: relative;
-    display: flex;
+.Projet {
+  position: relative;
+  display: flex;
 
-    &:hover {
-      cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-
-      .titleContainer {
-        flex-direction: row-reverse;
-      }
-    }
+  &:nth-child(even) {
+    flex-direction: row-reverse;
 
     .titleContainer {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      width: 50%;
-      padding: 1vw 2vw;
-
-      h1 {
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 3vw;
-      }
+      flex-direction: row-reverse;
     }
+  }
 
-    .image {
-      width: 50%;
-      height: 100vh;
-      display: flex;
-      align-items: center;
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 50%;
+    padding: 1vw 2vw;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-      }
+    h1 {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 3vw;
     }
+  }
+
+  .image {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.right {
+  flex-direction: row-reverse;
+  .titleContainer {
+    flex-direction: row-reverse;
   }
 }

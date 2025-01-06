@@ -12,7 +12,7 @@
     "linkPath": "booki",
     "rightTemplate": true,
     "image": "/Booki.jpg",
-    "description": "Booki - un projet de formation réalisé à Openclassrooms afin d'apprendre le  Html/css. Le but, développer la page d'accueil d'une agence de voyage avec HTML & CSS et faire en sorte que la page soit responsive.",
+    "description": "Booki - un projet de formation réalisé à Openclassrooms afin d'apprendre le Html/css. Le but, développer la page d'accueil d'une agence de voyage avec HTML & CSS et faire en sorte que la page soit responsive.",
     "lien": "https://scharlyopitz.github.io/Projet-Booki/"
   },
   {
@@ -28,7 +28,7 @@
     "linkPath": "sophie-bluel",
     "rightTemplate": true,
     "image": "/SophieBluel.webp",
-    "description": "Sophie Bluel - Portfolio - un projet de formation réalisé à OpenClassrooms afin d’apprendre le JavaScript. Basé sur une maquette Figma, j’ai intégré une page de connexion et affiché dynamiquement depuis une API les travaux dans le portfolio. L’intégration d’une modale était également demandée afin d’ajouter ou encore de supprimer des  travaux en tant qu’administrateur du site.",
+    "description": "Sophie Bluel - un projet de formation réalisé à OpenClassrooms afin d’apprendre le JavaScript. Basé sur une maquette Figma, j’ai intégré une page de connexion et affiché dynamiquement depuis une API les travaux dans le portfolio. L’intégration d’une modale était également demandée afin d’ajouter ou encore de supprimer des travaux en tant qu’administrateur du site.",
     "lien": "https://github.com/Scharlyopitz/Projet-6-Creez-une-page-web-dynamique-avec-JavaScript"
   },
   {
@@ -44,7 +44,7 @@
     "linkPath": "nina-carducci",
     "rightTemplate": true,
     "image": "/Projet9.webp",
-    "description": "Ninna Carducci - un projet de formation réalisé à OpenClassrooms afin d’apprendre le SEO. J'ai  optimisé le référencement d'un site de photographe en bonifiant les images, ajouté une balise meta description et réseaux sociaux, minifié le liens JS et CSS etc. Avec l'utilisation de  Google lighthouse.",
+    "description": "Ninna Carducci - un projet de formation réalisé à OpenClassrooms afin d’apprendre le SEO. J'ai optimisé le référencement d'un site de photographe en bonifiant les images, ajouté une balise meta description et réseaux sociaux, minifié le liens JS et CSS etc. Avec l'utilisation de Google lighthouse.",
     "lien": "https://scharlyopitz.github.io/Projet-SEO-OpenClassrooms/"
   }
 ]

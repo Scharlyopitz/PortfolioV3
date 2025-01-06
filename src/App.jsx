@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import Background from "./components/Background";
-import Projets from "./components/Projets";
 import Lenis from "lenis";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 export default function App() {
   useEffect(() => {
@@ -19,10 +19,8 @@ export default function App() {
   }, []);
 
   return (
-    <main>
-      <span className="AboutBtn">About</span>
-      <Background />
-      <Projets />
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }

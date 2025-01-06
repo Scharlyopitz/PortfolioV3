@@ -84,27 +84,27 @@ nav .AboutBtn::before, nav .AboutBtn::after {
   transform: translateY(-50%);
   opacity: 0;
   transition: 0.3s;
-  font-size: 18px;
+  font-size: 25px;
   will-change: transform;
 }
 nav .AboutBtn::before {
   content: "(";
-  left: -40%;
+  left: -20%;
 }
 nav .AboutBtn::after {
   content: ")";
-  right: -40%;
+  right: -20%;
 }
 nav .AboutBtn:hover {
   cursor: pointer;
 }
 nav .AboutBtn:hover::after {
-  transform: translate(-150%, -50%);
+  transform: translate(-90%, -50%);
   opacity: 1;
 }
 nav .AboutBtn:hover::before {
   opacity: 1;
-  transform: translate(150%, -50%);
+  transform: translate(90%, -50%);
 }
 
 .Projet {

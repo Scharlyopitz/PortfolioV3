@@ -26,6 +26,7 @@ nav {
       object-position: center;
     }
   }
+
   .AboutBtn {
     position: relative;
     z-index: 5;
@@ -40,29 +41,29 @@ nav {
       transform: translateY(-50%);
       opacity: 0;
       transition: 0.3s;
-      font-size: 18px;
+      font-size: 25px;
       will-change: transform;
     }
 
     &::before {
       content: "(";
-      left: -40%;
+      left: -20%;
     }
     &::after {
       content: ")";
-      right: -40%;
+      right: -20%;
     }
 
     &:hover {
       cursor: pointer;
 
       &::after {
-        transform: translate(-150%, -50%);
+        transform: translate(-90%, -50%);
         opacity: 1;
       }
       &::before {
         opacity: 1;
-        transform: translate(150%, -50%);
+        transform: translate(90%, -50%);
       }
     }
   }

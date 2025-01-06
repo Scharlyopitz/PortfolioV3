@@ -6,7 +6,7 @@ export default function Projets() {
     <div className="ProjetsContainer">
       {ProjetsData.map((projet, i) => {
         return (
-          <Link key={i} to={projet.link} className="Projet">
+          <Link key={i} to={projet.linkPath} className="Projet">
             <div className="image">
               <img src={projet.image} alt={projet.name} />
             </div>

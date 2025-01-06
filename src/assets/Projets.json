@@ -1,7 +1,7 @@
 [
   {
     "name": "Wilhelm Opitz",
-    "link": "wilhelm-opitz",
+    "linkPath": "wilhelm-opitz",
     "image": "/Wilhelm.webp",
     "description": [
       "Portfolio d'un graphiste, Wilhelm Opitz",
@@ -16,7 +16,7 @@
   },
   {
     "name": "Booki",
-    "link": "booki",
+    "linkPath": "booki",
     "image": "/Booki.jpg",
     "description": [
       "Booki - un projet de formation réalisé à",
@@ -33,7 +33,7 @@
   },
   {
     "name": "OhmyFood",
-    "link": "ohmyfood",
+    "linkPath": "ohmyfood",
     "image": "/Ohmyfood.jpg",
     "description": [
       "OhMyFood - un projet de formation réalisé",
@@ -50,7 +50,7 @@
   },
   {
     "name": "Sophie Bluel",
-    "link": "sophie-bluel",
+    "linkPath": "sophie-bluel",
     "image": "/SophieBluel.webp",
     "description": [
       "Sophie Bluel - Portfolio - un projet de",
@@ -69,7 +69,7 @@
   },
   {
     "name": "Kasa",
-    "link": "kasa",
+    "linkPath": "kasa",
     "image": "/Kasa.png",
     "description": [
       "Kasa - un projet de formation réalisé à",
@@ -86,7 +86,7 @@
   },
   {
     "name": "Nina Carducci",
-    "link": "nina-carducci",
+    "linkPath": "nina-carducci",
     "image": "/Projet9.webp",
     "description": [
       "Ninna Carducci - un projet de formation",

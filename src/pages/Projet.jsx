@@ -7,7 +7,7 @@ import TitlePage from "../components/TitlePage";
 export default function Projet() {
   const { projet } = useParams();
 
-  const rightProject = Projets.find((p) => p.link === projet);
+  const rightProject = Projets.find((p) => p.linkPath === projet);
 
   return (
     <main>

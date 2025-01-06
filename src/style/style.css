@@ -181,7 +181,7 @@ nav .AboutBtn:hover::before {
   text-transform: uppercase;
 }
 #Projet .Projet .titleContainer .siteBtn svg {
-  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
   will-change: transform;
 }
 #Projet .Projet .titleContainer .siteBtn:hover svg {

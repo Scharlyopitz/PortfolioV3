@@ -5,13 +5,7 @@
     "rightTemplate": false,
     "image": "/Wilhelm.webp",
     "description": [
-      "Portfolio d'un graphiste, Wilhelm Opitz",
-      "avec react, framer motion et emailJS",
-      "pour l'envoie du formulaire de contact.",
-      "Responsive design pour l'adaptation sur",
-      "tout les écran et optimisation des images",
-      "pour la fluidité du site ( compression des",
-      " images et mise au format webp )."
+      "Portfolio d'un graphiste, Wilhelm Opitz avec react, framer motion et emailJS pour l'envoie du formulaire de contact. Responsive design pour l'adaptation sur tout les écran et optimisation des images pour la fluidité du site ( compression des images et mise au format webp )."
     ],
     "liens": { "site": "https://wilhelmopitz.netlify.app/" }
   },
@@ -21,12 +15,7 @@
     "rightTemplate": true,
     "image": "/Booki.jpg",
     "description": [
-      "Booki - un projet de formation réalisé à",
-      "Openclassrooms afin d'apprendre le ",
-      "Html/css. Le but, développer la page",
-      "d'accueil d'une agence de voyage avec",
-      "HTML & CSS et faire en sorte que la page",
-      "soit responsive."
+      "Booki - un projet de formation réalisé à Openclassrooms afin d'apprendre le  Html/css. Le but, développer la page d'accueil d'une agence de voyage avec HTML & CSS et faire en sorte que la page soit responsive."
     ],
     "liens": {
       "github": "https://github.com/Scharlyopitz/Projet-Booki",
@@ -39,12 +28,7 @@
     "rightTemplate": false,
     "image": "/Ohmyfood.jpg",
     "description": [
-      "OhMyFood - un projet de formation réalisé",
-      "à OpenClassrooms afin d’apprendre les",
-      "animations CSS. Basé sur une maquette",
-      "Figma en mobile first, j’ai intégré une",
-      "page d’accueil, quatre pages de menu de",
-      "restaurants et un loader."
+      "OhMyFood - un projet de formation réalisé à OpenClassrooms afin d’apprendre les animations CSS. Basé sur une maquette Figma en mobile first, j’ai intégré une page d’accueil, quatre pages de menu de restaurants et un loader."
     ],
     "liens": {
       "github": "https://github.com/Scharlyopitz/Ohmyfood",
@@ -57,15 +41,7 @@
     "rightTemplate": true,
     "image": "/SophieBluel.webp",
     "description": [
-      "Sophie Bluel - Portfolio - un projet de",
-      "formation réalisé à OpenClassrooms afin",
-      "d’apprendre le JavaScript. Basé sur une",
-      "maquette Figma, j’ai intégré une page de",
-      "connexion et affiché dynamiquement depuis",
-      "une API les travaux dans le portfolio.",
-      "L’intégration d’une modale était également",
-      "demandée afin d’ajouter ou encore de supprimer",
-      "des  travaux en tant qu’administrateur du site."
+      "Sophie Bluel - Portfolio - un projet de formation réalisé à OpenClassrooms afin d’apprendre le JavaScript. Basé sur une maquette Figma, j’ai intégré une page de connexion et affiché dynamiquement depuis une API les travaux dans le portfolio. L’intégration d’une modale était également demandée afin d’ajouter ou encore de supprimer des  travaux en tant qu’administrateur du site."
     ],
     "liens": {
       "github": "https://github.com/Scharlyopitz/Projet-6-Creez-une-page-web-dynamique-avec-JavaScript"
@@ -77,13 +53,7 @@
     "rightTemplate": false,
     "image": "/Kasa.png",
     "description": [
-      "Kasa - un projet de formation réalisé à",
-      "Openclassrooms afin d'apprendre React.",
-      "Le but, créer une application web de",
-      "location immobilière, j'ai utilisé nodeJs",
-      "côté backend pour prendre les informations",
-      "et les ajoutés pour chaque logements et",
-      "utilisé des composents réutilisables."
+      "Kasa - un projet de formation réalisé à Openclassrooms afin d'apprendre React. Le but, créer une application web de location immobilière, j'ai utilisé nodeJs côté backend pour prendre les informations et les ajoutés pour chaque logements et utilisé des composents réutilisables."
     ],
     "liens": {
       "github": "https://github.com/Scharlyopitz/Projet-Kasa-OpenClassroom"
@@ -95,14 +65,7 @@
     "rightTemplate": true,
     "image": "/Projet9.webp",
     "description": [
-      "Ninna Carducci - un projet de formation",
-      "réalisé à OpenClassrooms afin d’apprendre",
-      "le SEO. J'ai  optimisé le référencement",
-      "d'un site de photographe en bonifiant les",
-      "images, ajouté une balise meta description",
-      "et réseaux sociaux, minifié le liens JS et",
-      " CSS etc. Avec l'utilisation de  Google",
-      " lighthouse."
+      "Ninna Carducci - un projet de formation réalisé à OpenClassrooms afin d’apprendre le SEO. J'ai  optimisé le référencement d'un site de photographe en bonifiant les images, ajouté une balise meta description et réseaux sociaux, minifié le liens JS et CSS etc. Avec l'utilisation de  Google lighthouse."
     ],
     "liens": {
       "github": "https://github.com/Scharlyopitz/Projet-SEO-OpenClassrooms",

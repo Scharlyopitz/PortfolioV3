@@ -13,6 +13,11 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html.lenis,
 html.lenis body {
   height: auto;

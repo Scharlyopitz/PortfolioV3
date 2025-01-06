@@ -61,7 +61,7 @@ nav .AboutBtn {
   pointer-events: all;
 }
 nav .logoContainer {
-  width: 60px;
+  width: 3.1vw;
 }
 nav .logoContainer img {
   width: 100%;
@@ -76,7 +76,7 @@ nav .AboutBtn {
   z-index: 5;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1vw;
 }
 nav .AboutBtn::before, nav .AboutBtn::after {
   position: absolute;

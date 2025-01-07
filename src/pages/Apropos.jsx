@@ -26,20 +26,32 @@ export default function Apropos() {
       transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
     },
   };
+
+  const contactAnime = {
+    initial: {
+      y: "105%",
+    },
+    animate: {
+      y: "0",
+      transition: {
+        duration: 0.75,
+        delay: 0.5,
+        ease: easeOutCubic,
+      },
+    },
+    exit: {
+      y: "105%",
+      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+    },
+  };
   return (
-    <main id="Apropos">
+    <m.main initial="initial" animate="animate" exit="exit" id="Apropos">
       <TitlePage title="A propos" />
       <div className="descriptionContainer">
         {AproposData[0].split(" ").map((word, i) => {
           return (
             <div key={i} className="hidden">
-              <m.p
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                custom={i}
-                variants={descriptionAnime}
-              >
+              <m.p custom={i} variants={descriptionAnime}>
                 {word}
               </m.p>
             </div>
@@ -49,22 +61,24 @@ export default function Apropos() {
       <div className="contactContainer">
         <div className="left">
           <div className="hidden">
-            <div>
+            <m.div variants={contactAnime}>
               <Link to={githubLink} target="_blank">
                 Github
               </Link>
-            </div>
+            </m.div>
           </div>
           <div className="hidden">
-            <div>
+            <m.div variants={contactAnime}>
               <Link to={instagramLink} target="_blank">
                 Instagram
               </Link>
-            </div>
+            </m.div>
           </div>
         </div>
-        <p>scharly.opitz@gmail.com</p>
+        <div className="hidden">
+          <m.p variants={contactAnime}>scharly.opitz@gmail.com</m.p>
+        </div>
       </div>
-    </main>
+    </m.main>
   );
 }

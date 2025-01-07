@@ -224,6 +224,9 @@ nav .AboutBtn:hover::before {
   left: 43.3vw;
 }
 
+#Apropos {
+  height: 100vh;
+}
 #Apropos .descriptionContainer {
   display: flex;
   flex-grow: 1;

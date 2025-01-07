@@ -27,7 +27,7 @@ export default function App() {
     <>
       <NavBar />
       <Background />
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:projet" element={<Projet />} />

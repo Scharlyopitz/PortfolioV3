@@ -12,9 +12,11 @@ export default function Apropos() {
   const descriptionAnime = {
     initial: {
       y: "105%",
+      opacity: 0,
     },
     animate: (i) => ({
       y: "0",
+      opacity: 1,
       transition: {
         duration: 0.75,
         delay: 0.007 * i,
@@ -23,6 +25,7 @@ export default function Apropos() {
     }),
     exit: {
       y: "105%",
+      opacity: 0,
       transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
     },
   };
@@ -30,9 +33,11 @@ export default function Apropos() {
   const contactAnime = {
     initial: {
       y: "105%",
+      opacity: 0,
     },
     animate: {
       y: "0",
+      opacity: 1,
       transition: {
         duration: 0.75,
         delay: 0.3,
@@ -41,6 +46,7 @@ export default function Apropos() {
     },
     exit: {
       y: "105%",
+      opacity: 0,
       transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
     },
   };

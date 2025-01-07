@@ -23,7 +23,11 @@ export default function Projet() {
         </div>
         <div className={`description ${rightProject.rightTemplate && "right"}`}>
           {rightProject.description.split(" ").map((word, i) => {
-            return <p key={i}>{word}</p>;
+            return (
+              <div key={i} className="hidden">
+                <p>{word}</p>
+              </div>
+            );
           })}
         </div>
         <div className="titleContainer">

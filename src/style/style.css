@@ -26,6 +26,10 @@ p {
   font-size: 1.2vw;
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 html.lenis,
 html.lenis body {
   height: auto;

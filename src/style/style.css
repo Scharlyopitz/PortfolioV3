@@ -85,11 +85,9 @@ nav .AboutBtn {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1vw;
+  padding: 1vw;
 }
-nav .AboutBtn span {
-  display: block;
-}
-nav .AboutBtn span::before, nav .AboutBtn span::after {
+nav .AboutBtn::before, nav .AboutBtn::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -98,24 +96,24 @@ nav .AboutBtn span::before, nav .AboutBtn span::after {
   font-size: 1.1vw;
   will-change: transform;
 }
-nav .AboutBtn span::before {
+nav .AboutBtn::before {
   content: "(";
-  left: -20%;
+  left: 0;
 }
-nav .AboutBtn span::after {
+nav .AboutBtn::after {
   content: ")";
-  right: -20%;
+  right: 0;
 }
-nav .AboutBtn span:hover {
+nav .AboutBtn:hover {
   cursor: pointer;
 }
-nav .AboutBtn span:hover::after {
-  transform: translate(-90%, -50%);
+nav .AboutBtn:hover::after {
+  transform: translate(-100%, -50%);
   opacity: 1;
 }
-nav .AboutBtn span:hover::before {
+nav .AboutBtn:hover::before {
   opacity: 1;
-  transform: translate(90%, -50%);
+  transform: translate(100%, -50%);
 }
 
 .Projet {

@@ -33,41 +33,38 @@ nav {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1vw;
+    padding: 1vw;
 
-    span {
-      display: block;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: 0.3s;
+      font-size: 1.1vw;
+      will-change: transform;
+    }
 
-      &::before,
+    &::before {
+      content: "(";
+      left: 0;
+    }
+    &::after {
+      content: ")";
+      right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+
       &::after {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        opacity: 0;
-        transition: 0.3s;
-        font-size: 1.1vw;
-        will-change: transform;
+        transform: translate(-100%, -50%);
+        opacity: 1;
       }
-
       &::before {
-        content: "(";
-        left: -20%;
-      }
-      &::after {
-        content: ")";
-        right: -20%;
-      }
-
-      &:hover {
-        cursor: pointer;
-
-        &::after {
-          transform: translate(-90%, -50%);
-          opacity: 1;
-        }
-        &::before {
-          opacity: 1;
-          transform: translate(90%, -50%);
-        }
+        opacity: 1;
+        transform: translate(100%, -50%);
       }
     }
   }

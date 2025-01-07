@@ -10,7 +10,11 @@ export default function Apropos() {
       <TitlePage title="A propos" />
       <div className="descriptionContainer">
         {AproposData[0].split(" ").map((word, i) => {
-          return <p key={i}>{word}</p>;
+          return (
+            <div key={i} className="hidden">
+              <p>{word}</p>
+            </div>
+          );
         })}
       </div>
       <div className="contactContainer">

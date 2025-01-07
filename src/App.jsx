@@ -13,7 +13,7 @@ export default function App() {
 
   useEffect(() => {
     // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP
-    history.scrollRestoration = "manual";
+    // history.scrollRestoration = "manual";
 
     const lenis = new Lenis();
 

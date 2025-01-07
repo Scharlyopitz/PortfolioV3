@@ -130,15 +130,19 @@ nav .AboutBtn:hover::before {
 .Projet:nth-child(even) {
   flex-direction: row-reverse;
 }
-.Projet:nth-child(even) .titleContainer {
+.Projet:nth-child(even) .title {
   flex-direction: row-reverse;
 }
 .Projet .titleContainer {
   display: flex;
-  justify-content: space-between;
   align-items: end;
   width: 50%;
   padding: 1vw 2vw;
+}
+.Projet .titleContainer .title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .Projet .titleContainer h1 {
   text-transform: uppercase;
@@ -195,24 +199,28 @@ nav .AboutBtn:hover::before {
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
-#Projet .Projet .titleContainer .siteBtn {
+#Projet .Projet .titleContainer .title {
+  display: flex;
+  align-items: end;
+}
+#Projet .Projet .titleContainer .title .siteBtn {
   display: flex;
   flex-direction: column;
   font-size: 1vw;
   align-items: start;
   text-transform: uppercase;
 }
-#Projet .Projet .titleContainer .siteBtn svg {
+#Projet .Projet .titleContainer .title .siteBtn svg {
   transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
   will-change: transform;
 }
-#Projet .Projet .titleContainer .siteBtn:hover svg {
+#Projet .Projet .titleContainer .title .siteBtn:hover svg {
   transform: translate(335%);
 }
 #Projet .right {
   flex-direction: row-reverse;
 }
-#Projet .right .titleContainer {
+#Projet .right .title {
   flex-direction: row-reverse;
 }
 #Projet .right .description {

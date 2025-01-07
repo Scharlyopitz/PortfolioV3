@@ -31,11 +31,13 @@ export default function Projet() {
           })}
         </div>
         <div className="titleContainer">
-          <Link to={rightProject.lien} target="_blank" className="siteBtn">
-            <span>voir site</span>
-            <FontAwesomeIcon icon={faRightLong} />
-          </Link>
-          <h1>{rightProject.name}</h1>
+          <div className="title">
+            <Link to={rightProject.lien} target="_blank" className="siteBtn">
+              <span>voir site</span>
+              <FontAwesomeIcon icon={faRightLong} />
+            </Link>
+            <h1>{rightProject.name}</h1>
+          </div>
         </div>
       </div>
     </main>

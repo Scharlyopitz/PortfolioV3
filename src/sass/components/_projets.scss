@@ -9,17 +9,22 @@
   &:nth-child(even) {
     flex-direction: row-reverse;
 
-    .titleContainer {
+    .title {
       flex-direction: row-reverse;
     }
   }
 
   .titleContainer {
     display: flex;
-    justify-content: space-between;
     align-items: end;
     width: 50%;
     padding: 1vw 2vw;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
 
     h1 {
       text-transform: uppercase;

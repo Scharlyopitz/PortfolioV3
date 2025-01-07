@@ -48,12 +48,20 @@ export default function Apropos() {
       </div>
       <div className="contactContainer">
         <div className="left">
-          <Link to={githubLink} target="_blank">
-            Github
-          </Link>
-          <Link to={instagramLink} target="_blank">
-            Instagram
-          </Link>
+          <div className="hidden">
+            <div>
+              <Link to={githubLink} target="_blank">
+                Github
+              </Link>
+            </div>
+          </div>
+          <div className="hidden">
+            <div>
+              <Link to={instagramLink} target="_blank">
+                Instagram
+              </Link>
+            </div>
+          </div>
         </div>
         <p>scharly.opitz@gmail.com</p>
       </div>

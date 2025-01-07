@@ -9,6 +9,10 @@
   display: none;
 }
 
+html {
+  position: relative;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -146,6 +150,7 @@ nav .AboutBtn:hover::before {
   height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .Projet .image img {
   width: 100%;

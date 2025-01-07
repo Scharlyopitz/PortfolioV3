@@ -8,6 +8,11 @@
   display: none;
 }
 
+html {
+  // POUR CORRIGER LE BUG AU USESCROLL DE FRAMER MOTION
+  position: relative;
+}
+
 body {
   width: 100%;
   height: 100vh;

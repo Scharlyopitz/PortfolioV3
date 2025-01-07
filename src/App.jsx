@@ -6,6 +6,7 @@ import Projet from "./pages/Projet";
 import Apropos from "./pages/Apropos";
 import Background from "./components/Background";
 import NavBar from "./components/NavBar";
+import { AnimatePresence } from "motion/react";
 
 export default function App() {
   useEffect(() => {
@@ -26,11 +27,13 @@ export default function App() {
     <>
       <NavBar />
       <Background />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:projet" element={<Projet />} />
-        <Route path="/apropos" element={<Apropos />} />
-      </Routes>
+      <AnimatePresence>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:projet" element={<Projet />} />
+          <Route path="/apropos" element={<Apropos />} />
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }

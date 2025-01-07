@@ -86,7 +86,10 @@ nav .AboutBtn {
   font-weight: 500;
   font-size: 1vw;
 }
-nav .AboutBtn::before, nav .AboutBtn::after {
+nav .AboutBtn span {
+  display: block;
+}
+nav .AboutBtn span::before, nav .AboutBtn span::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -95,22 +98,22 @@ nav .AboutBtn::before, nav .AboutBtn::after {
   font-size: 1.1vw;
   will-change: transform;
 }
-nav .AboutBtn::before {
+nav .AboutBtn span::before {
   content: "(";
   left: -20%;
 }
-nav .AboutBtn::after {
+nav .AboutBtn span::after {
   content: ")";
   right: -20%;
 }
-nav .AboutBtn:hover {
+nav .AboutBtn span:hover {
   cursor: pointer;
 }
-nav .AboutBtn:hover::after {
+nav .AboutBtn span:hover::after {
   transform: translate(-90%, -50%);
   opacity: 1;
 }
-nav .AboutBtn:hover::before {
+nav .AboutBtn span:hover::before {
   opacity: 1;
   transform: translate(90%, -50%);
 }

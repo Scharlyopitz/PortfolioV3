@@ -38,13 +38,26 @@
     .titleContainer {
       .title {
         display: flex;
-        align-items: end;
+        align-items: center;
+        position: relative;
+
+        .numberContainer {
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+        }
+
         .siteBtn {
           display: flex;
           flex-direction: column;
           font-size: 1vw;
           align-items: start;
           text-transform: uppercase;
+
+          span {
+            display: block;
+          }
 
           svg {
             transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
@@ -66,6 +79,11 @@
 
     .title {
       flex-direction: row-reverse;
+
+      .numberContainer {
+        left: auto !important;
+        right: 0;
+      }
     }
 
     .description {

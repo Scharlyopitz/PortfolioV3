@@ -201,7 +201,14 @@ nav .AboutBtn:hover::before {
 }
 #Projet .Projet .titleContainer .title {
   display: flex;
-  align-items: end;
+  align-items: center;
+  position: relative;
+}
+#Projet .Projet .titleContainer .title .numberContainer {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 #Projet .Projet .titleContainer .title .siteBtn {
   display: flex;
@@ -209,6 +216,9 @@ nav .AboutBtn:hover::before {
   font-size: 1vw;
   align-items: start;
   text-transform: uppercase;
+}
+#Projet .Projet .titleContainer .title .siteBtn span {
+  display: block;
 }
 #Projet .Projet .titleContainer .title .siteBtn svg {
   transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
@@ -222,6 +232,10 @@ nav .AboutBtn:hover::before {
 }
 #Projet .right .title {
   flex-direction: row-reverse;
+}
+#Projet .right .title .numberContainer {
+  left: auto !important;
+  right: 0;
 }
 #Projet .right .description {
   left: 2vw;

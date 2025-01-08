@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Lenis from "lenis";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
@@ -10,6 +10,12 @@ import { AnimatePresence } from "motion/react";
 
 export default function App() {
   const { pathname } = useLocation();
+
+  // const [aboutPage, setAboutPage] = useState(false);
+
+  // useEffect(() => {
+  //   pathname === "/apropos" ? setAboutPage(true) : setAboutPage(false);
+  // }, [pathname]);
 
   useEffect(() => {
     // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP

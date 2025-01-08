@@ -11,7 +11,7 @@ export default function NavBar() {
     },
     animate: {
       y: "0%",
-      transition: { duration: 0.9, ease: [0.33, 1, 0.68, 1] },
+      transition: { duration: 0.9, delay: 0.8, ease: [0.33, 1, 0.68, 1] },
     },
     exit: {
       y: "105%",

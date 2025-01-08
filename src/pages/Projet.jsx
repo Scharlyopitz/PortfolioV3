@@ -95,7 +95,7 @@ export default function Projet() {
       opacity: 0,
       transition: {
         duration: 0.75,
-        delay: 0.007 * -i,
+        delay: 0.003 * i,
         ease: [0.65, 0, 0.35, 1],
       },
     }),

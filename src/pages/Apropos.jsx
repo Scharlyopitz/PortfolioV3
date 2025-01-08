@@ -7,8 +7,6 @@ export default function Apropos() {
   const githubLink = "https://github.com/Scharlyopitz";
   const instagramLink = "https://www.instagram.com/s.optz/?hl=fr";
 
-  const easeOutCubic = [0.33, 1, 0.68, 1];
-
   const descriptionAnime = {
     initial: {
       y: "105%",
@@ -21,14 +19,18 @@ export default function Apropos() {
       transition: {
         duration: 0.75,
         delay: 0.007 * i,
-        ease: easeOutCubic,
+        ease: [0.33, 1, 0.68, 1],
       },
     }),
-    exit: {
+    exit: (i) => ({
       y: "105%",
       opacity: 0,
-      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
-    },
+      transition: {
+        duration: 0.75,
+        delay: 0.003 * i,
+        ease: [0.65, 0, 0.35, 1],
+      },
+    }),
   };
 
   const contactAnime = {
@@ -43,15 +45,16 @@ export default function Apropos() {
       transition: {
         duration: 0.75,
         delay: 0.3,
-        ease: easeOutCubic,
+        ease: [0.33, 1, 0.68, 1],
       },
     },
     exit: {
       y: "105%",
       opacity: 0,
-      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: 0.75, delay: 0.2, ease: [0.65, 0, 0.35, 1] },
     },
   };
+
   return (
     <m.main initial="initial" animate="animate" exit="exit" id="Apropos">
       <TitlePage title="A propos" />

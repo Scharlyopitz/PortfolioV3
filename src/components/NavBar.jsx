@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "/Logo.png";
 import { AnimatePresence, motion as m } from "motion/react";
 
-export default function NavBar() {
+export default function NavBar({ setAbout }) {
   const { pathname } = useLocation();
 
   const buttonAnimation = {
@@ -19,6 +19,10 @@ export default function NavBar() {
     },
   };
 
+  function handleClick() {
+    setAbout(true);
+  }
+
   return (
     <nav>
       <Link to="/" className="logoContainer">
@@ -33,7 +37,11 @@ export default function NavBar() {
               exit="exit"
               variants={buttonAnimation}
             >
-              <Link to="/apropos" className="AboutBtn hidden">
+              <Link
+                to="/apropos"
+                onClick={handleClick}
+                className="AboutBtn hidden"
+              >
                 A propos
               </Link>
             </m.div>

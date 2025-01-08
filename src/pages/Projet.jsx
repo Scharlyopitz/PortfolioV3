@@ -6,10 +6,20 @@ import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion as m } from "motion/react";
 
-export default function Projet() {
+export default function Projet({ about }) {
   const { projet } = useParams();
 
   const rightProject = Projets.find((p) => p.linkPath === projet);
+
+  const titleAnime = {
+    initial: {
+      y: 0,
+    },
+    exit: {
+      y: about ? "105%" : 0,
+      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+    },
+  };
 
   const numberAnime = {
     initial: {
@@ -22,7 +32,7 @@ export default function Projet() {
       transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] },
     },
     exit: {
-      y: 0,
+      y: about ? "105%" : 0,
       opacity: 1,
       transition: { duration: 0.8, ease: [0.65, 0, 0.35, 1] },
     },
@@ -55,7 +65,9 @@ export default function Projet() {
       transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
     },
     exit: {
-      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      clipPath: about
+        ? "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)"
+        : "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
     },
   };
@@ -70,7 +82,8 @@ export default function Projet() {
       transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
     },
     exit: {
-      scale: 1,
+      scale: about ? 0.77 : 1,
+      opacity: about ? 0 : 1,
       transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
     },
   };
@@ -180,7 +193,9 @@ export default function Projet() {
                 0{rightProject.id}
               </m.h1>
             </div>
-            <h1>{rightProject.name}</h1>
+            <div className="hidden">
+              <m.h1 variants={titleAnime}>{rightProject.name}</m.h1>
+            </div>
           </div>
         </div>
       </div>

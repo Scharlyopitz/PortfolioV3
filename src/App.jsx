@@ -11,11 +11,11 @@ import { AnimatePresence } from "motion/react";
 export default function App() {
   const { pathname } = useLocation();
 
-  // const [aboutPage, setAboutPage] = useState(false);
+  const [about, setAbout] = useState(false);
 
-  // useEffect(() => {
-  //   pathname === "/apropos" ? setAboutPage(true) : setAboutPage(false);
-  // }, [pathname]);
+  useEffect(() => {
+    setAbout(false);
+  }, [pathname]);
 
   useEffect(() => {
     // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP
@@ -33,12 +33,12 @@ export default function App() {
 
   return (
     <>
-      <NavBar />
+      <NavBar setAbout={setAbout} />
       <Background />
       <AnimatePresence mode="wait" initial={false}>
         <Routes location={pathname} key={pathname}>
           <Route path="/" element={<Home />} />
-          <Route path="/:projet" element={<Projet />} />
+          <Route path="/:projet" element={<Projet about={about} />} />
           <Route path="/apropos" element={<Apropos />} />
         </Routes>
       </AnimatePresence>

@@ -13,6 +13,7 @@ export default function Apropos() {
     initial: {
       y: "105%",
       opacity: 0,
+      willChange: "transform",
     },
     animate: (i) => ({
       y: "0",
@@ -34,6 +35,7 @@ export default function Apropos() {
     initial: {
       y: "105%",
       opacity: 0,
+      willChange: "transform",
     },
     animate: {
       y: "0",

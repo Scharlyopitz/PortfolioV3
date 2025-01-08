@@ -19,7 +19,7 @@ export default function Projet() {
     animate: {
       y: "105%",
       opacity: 0,
-      transition: { duration: 0.8, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] },
     },
     exit: {
       y: 0,
@@ -36,7 +36,7 @@ export default function Projet() {
     animate: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.75, delay: 0.3, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: 0.75, delay: 0.3, ease: [0.33, 1, 0.68, 1] },
     },
     exit: {
       y: "105%",
@@ -75,6 +75,65 @@ export default function Projet() {
     },
   };
 
+  const descriptionAnime = {
+    initial: {
+      y: "105%",
+      opacity: 0,
+      willChange: "transform",
+    },
+    animate: (i) => ({
+      y: "0",
+      opacity: 1,
+      transition: {
+        duration: 0.75,
+        delay: 0.007 * i,
+        ease: [0.33, 1, 0.68, 1],
+      },
+    }),
+    exit: (i) => ({
+      y: "105%",
+      opacity: 0,
+      transition: {
+        duration: 0.75,
+        delay: 0.007 * -i,
+        ease: [0.65, 0, 0.35, 1],
+      },
+    }),
+  };
+
+  const indexAnime = {
+    initial: {
+      y: "105%",
+      opacity: 0,
+      willChange: "transform",
+    },
+    animate: {
+      y: "0",
+      opacity: 1,
+      transition: {
+        duration: 0.75,
+        ease: [0.33, 1, 0.68, 1],
+      },
+    },
+    exit: {
+      y: "105%",
+      opacity: 0,
+      transition: {
+        duration: 0.75,
+        ease: [0.65, 0, 0.35, 1],
+      },
+    },
+  };
+
+  const staggerIndex = {
+    animate: {
+      transition: { staggerChildren: 0.07 },
+    },
+    exit: {
+      transition: { staggerChildren: 0.07, staggerDirection: 1 },
+    },
+  };
+
   return (
     <m.main initial="initial" animate="animate" exit="exit" id="Projet">
       <TitlePage title={rightProject.name} />
@@ -86,15 +145,17 @@ export default function Projet() {
             alt={rightProject.name}
           />
         </m.div>
-        <div className="index">
-          <span>index </span>
-          <span>/ 0{rightProject.id}</span>
-        </div>
+        <m.div variants={staggerIndex} className="index hidden">
+          <m.span variants={indexAnime}>index</m.span>
+          <m.span variants={indexAnime}>/ 0{rightProject.id}</m.span>
+        </m.div>
         <div className={`description ${rightProject.rightTemplate && "right"}`}>
           {rightProject.description.split(" ").map((word, i) => {
             return (
               <div key={i} className="hidden">
-                <p>{word}</p>
+                <m.p custom={i} variants={descriptionAnime}>
+                  {word}
+                </m.p>
               </div>
             );
           })}

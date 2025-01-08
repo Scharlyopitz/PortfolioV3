@@ -180,13 +180,16 @@ nav .AboutBtn:hover::before {
   position: absolute;
   left: 52vw;
   top: 2.2vw;
+  display: flex;
+  gap: 0.3vw;
 }
 #Projet .Projet .index span {
+  display: inline-block;
   font-size: 1vw;
   text-transform: uppercase;
 }
 #Projet .Projet .index span:nth-child(2) {
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5019607843);
 }
 #Projet .Projet .description {
   position: absolute;

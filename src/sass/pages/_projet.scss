@@ -13,13 +13,16 @@
       position: absolute;
       left: 52vw;
       top: 2.2vw;
+      display: flex;
+      gap: 0.3vw;
 
       span {
+        display: inline-block;
         font-size: 1vw;
         text-transform: uppercase;
 
         &:nth-child(2) {
-          opacity: 0.5;
+          color: $WhiteOpacity;
         }
       }
     }

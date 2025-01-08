@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Projets from "../assets/Projets.json";
 import { Link, useParams } from "react-router-dom";
 import TitlePage from "../components/TitlePage";
@@ -6,8 +6,18 @@ import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion as m } from "motion/react";
 
-export default function Projet({ about }) {
+export default function Projet({
+  about,
+  animateTransiViaAbout,
+  setanimateTransiViaAbout,
+}) {
   const { projet } = useParams();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setanimateTransiViaAbout(false);
+    }, 100);
+  }, [animateTransiViaAbout]);
 
   const rightProject = Projets.find((p) => p.linkPath === projet);
 
@@ -57,11 +67,15 @@ export default function Projet({ about }) {
 
   const imageContainerAnime = {
     initial: {
-      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      clipPath: animateTransiViaAbout
+        ? "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)"
+        : "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      opacity: animateTransiViaAbout ? 0 : 1,
       willChange: "clip-path",
     },
     animate: {
       clipPath: "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)",
+      opacity: 1,
       transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
     },
     exit: {

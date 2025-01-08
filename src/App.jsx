@@ -13,8 +13,11 @@ export default function App() {
 
   const [about, setAbout] = useState(false);
 
+  const [animateTransiViaAbout, setanimateTransiViaAbout] = useState(false);
+
   useEffect(() => {
     setAbout(false);
+    pathname === "/apropos" && setanimateTransiViaAbout(true);
   }, [pathname]);
 
   useEffect(() => {
@@ -37,8 +40,22 @@ export default function App() {
       <Background />
       <AnimatePresence mode="wait" initial={false}>
         <Routes location={pathname} key={pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/:projet" element={<Projet about={about} />} />
+          <Route
+            path="/"
+            element={
+              <Home setanimateTransiViaAbout={setanimateTransiViaAbout} />
+            }
+          />
+          <Route
+            path="/:projet"
+            element={
+              <Projet
+                about={about}
+                animateTransiViaAbout={animateTransiViaAbout}
+                setanimateTransiViaAbout={setanimateTransiViaAbout}
+              />
+            }
+          />
           <Route path="/apropos" element={<Apropos />} />
         </Routes>
       </AnimatePresence>

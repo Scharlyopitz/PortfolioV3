@@ -29,7 +29,7 @@ export default function App() {
     <>
       <NavBar />
       <Background />
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <Routes location={pathname} key={pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/:projet" element={<Projet />} />

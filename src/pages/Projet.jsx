@@ -24,16 +24,23 @@ export default function Projet({
   const titleAnime = {
     initial: {
       y: 0,
+      opacity: animateTransiViaAbout ? 0 : 1,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
     },
     exit: {
-      y: about ? "105%" : 0,
+      y: 0,
+      opacity: about ? 0 : 1,
       transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
     },
   };
 
   const numberAnime = {
     initial: {
-      y: 0,
+      y: animateTransiViaAbout ? "105%" : 0,
       willChange: "transform",
     },
     animate: {
@@ -88,7 +95,7 @@ export default function Projet({
 
   const imageAnime = {
     initial: {
-      scale: 1,
+      scale: animateTransiViaAbout ? 0.77 : 1,
       willChange: "transform",
     },
     animate: {

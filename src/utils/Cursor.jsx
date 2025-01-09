@@ -16,11 +16,11 @@ export default function Cursor() {
   const textChange = {
     open: {
       y: "105%",
-      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
     },
     close: {
       y: 0,
-      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
     },
   };
 

@@ -13,13 +13,13 @@ export default function Projet({
 }) {
   const { projet } = useParams();
 
+  const rightProject = Projets.find((p) => p.linkPath === projet);
+
   useEffect(() => {
     setTimeout(() => {
       setanimateTransiViaAbout(false);
     }, 100);
   }, [animateTransiViaAbout]);
-
-  const rightProject = Projets.find((p) => p.linkPath === projet);
 
   const titleAnime = {
     initial: {

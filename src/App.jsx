@@ -7,6 +7,7 @@ import Apropos from "./pages/Apropos";
 import Background from "./components/Background";
 import NavBar from "./components/NavBar";
 import { AnimatePresence } from "motion/react";
+import Cursor from "./utils/Cursor";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -37,6 +38,7 @@ export default function App() {
   return (
     <>
       <NavBar setAbout={setAbout} />
+      <Cursor />
       <Background />
       <AnimatePresence mode="wait" initial={false}>
         <Routes location={pathname} key={pathname}>

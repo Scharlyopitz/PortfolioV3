@@ -1,6 +1,18 @@
 .Cursor {
-  position: absolute;
+  position: fixed;
   mix-blend-mode: difference;
   z-index: 6;
   text-transform: uppercase;
+  pointer-events: none;
+  padding: 20px;
+
+  p {
+    position: relative;
+    &::after {
+      content: "open";
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+    }
+  }
 }

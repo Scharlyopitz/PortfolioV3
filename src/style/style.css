@@ -324,8 +324,19 @@ nav .AboutBtn:hover::before {
 }
 
 .Cursor {
-  position: absolute;
+  position: fixed;
   mix-blend-mode: difference;
   z-index: 6;
   text-transform: uppercase;
+  pointer-events: none;
+  padding: 20px;
+}
+.Cursor p {
+  position: relative;
+}
+.Cursor p::after {
+  content: "open";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */

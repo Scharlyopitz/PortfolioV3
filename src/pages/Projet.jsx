@@ -10,6 +10,7 @@ export default function Projet({
   about,
   animateTransiViaAbout,
   setanimateTransiViaAbout,
+  setHovered,
 }) {
   const { projet } = useParams();
 
@@ -200,6 +201,8 @@ export default function Projet({
         <div className="titleContainer">
           <div className="title">
             <Link
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
               to={rightProject.lien}
               target="_blank"
               className="siteBtn hidden"

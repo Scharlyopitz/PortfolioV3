@@ -333,6 +333,7 @@ nav .AboutBtn:hover::before {
 }
 .Cursor p {
   position: relative;
+  transition: opacity 0.3s;
 }
 .Cursor p::after {
   content: "open";

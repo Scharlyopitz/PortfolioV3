@@ -8,6 +8,7 @@
 
   p {
     position: relative;
+    transition: opacity 0.3s;
     &::after {
       content: "open";
       position: absolute;

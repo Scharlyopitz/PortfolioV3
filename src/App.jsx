@@ -16,6 +16,8 @@ export default function App() {
 
   const [animateTransiViaAbout, setanimateTransiViaAbout] = useState(false);
 
+  const [hovered, setHovered] = useState(false);
+
   useEffect(() => {
     setAbout(false);
     pathname === "/apropos" && setanimateTransiViaAbout(true);
@@ -37,8 +39,8 @@ export default function App() {
 
   return (
     <>
-      <NavBar setAbout={setAbout} />
-      <Cursor />
+      <NavBar setAbout={setAbout} setHovered={setHovered} />
+      <Cursor hovered={hovered} />
       <Background />
       <AnimatePresence mode="wait" initial={false}>
         <Routes location={pathname} key={pathname}>
@@ -55,10 +57,14 @@ export default function App() {
                 about={about}
                 animateTransiViaAbout={animateTransiViaAbout}
                 setanimateTransiViaAbout={setanimateTransiViaAbout}
+                setHovered={setHovered}
               />
             }
           />
-          <Route path="/apropos" element={<Apropos />} />
+          <Route
+            path="/apropos"
+            element={<Apropos setHovered={setHovered} />}
+          />
         </Routes>
       </AnimatePresence>
     </>

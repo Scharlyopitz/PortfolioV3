@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "/Logo.png";
 import { AnimatePresence, motion as m } from "motion/react";
 
-export default function NavBar({ setAbout }) {
+export default function NavBar({ setAbout, setHovered }) {
   const { pathname } = useLocation();
 
   const buttonAnimation = {
@@ -21,6 +21,7 @@ export default function NavBar({ setAbout }) {
 
   function handleClick() {
     setAbout(true);
+    setHovered(false);
   }
 
   return (
@@ -39,7 +40,9 @@ export default function NavBar({ setAbout }) {
             >
               <Link
                 to="/apropos"
-                onClick={handleClick}
+                onClick={() => handleClick()}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
                 className="AboutBtn hidden"
               >
                 A propos

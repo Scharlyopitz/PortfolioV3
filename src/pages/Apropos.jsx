@@ -3,9 +3,14 @@ import AproposData from "../assets/AproposData.json";
 import TitlePage from "../components/TitlePage";
 import { motion as m } from "motion/react";
 
-export default function Apropos() {
-  const githubLink = "https://github.com/Scharlyopitz";
-  const instagramLink = "https://www.instagram.com/s.optz/?hl=fr";
+export default function Apropos({ setHovered }) {
+  const socials = [
+    { name: "Github", link: "https://github.com/Scharlyopitz" },
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/s.optz/?hl=fr",
+    },
+  ];
 
   const descriptionAnime = {
     initial: {
@@ -77,20 +82,22 @@ export default function Apropos() {
       </div>
       <div className="contactContainer">
         <div className="left">
-          <div className="hidden">
-            <m.div variants={contactAnime}>
-              <Link to={githubLink} target="_blank">
-                Github
-              </Link>
-            </m.div>
-          </div>
-          <div className="hidden">
-            <m.div variants={contactAnime}>
-              <Link to={instagramLink} target="_blank">
-                Instagram
-              </Link>
-            </m.div>
-          </div>
+          {socials.map(({ name, link }, i) => {
+            return (
+              <div key={i} className="hidden">
+                <m.div variants={contactAnime}>
+                  <Link
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
+                    to={link}
+                    target="_blank"
+                  >
+                    {name}
+                  </Link>
+                </m.div>
+              </div>
+            );
+          })}
         </div>
         <div className="hidden">
           <m.p variants={contactAnime}>scharly.opitz@gmail.com</m.p>

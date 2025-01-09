@@ -2,7 +2,7 @@ import { AnimatePresence, motion as m } from "motion/react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-export default function Cursor() {
+export default function Cursor({ hovered }) {
   const { pathname } = useLocation();
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -35,7 +35,9 @@ export default function Cursor() {
         animate={pathname === "/" ? "open" : "close"}
         className="hidden"
       >
-        <m.p variants={textChange}>close</m.p>
+        <m.p style={{ opacity: hovered ? 0 : 1 }} variants={textChange}>
+          close
+        </m.p>
       </m.div>
     </m.div>
   );

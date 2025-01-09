@@ -1,6 +1,10 @@
 #Apropos {
   height: 100vh;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   .descriptionContainer {
     display: flex;
     flex-grow: 1;

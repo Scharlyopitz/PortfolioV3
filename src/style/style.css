@@ -174,7 +174,7 @@ nav .AboutBtn:hover::before {
 }
 
 #Projet .Projet:hover {
-  cursor: auto;
+  cursor: pointer;
 }
 #Projet .Projet .index {
   position: absolute;
@@ -251,6 +251,9 @@ nav .AboutBtn:hover::before {
 
 #Apropos {
   height: 100vh;
+}
+#Apropos:hover {
+  cursor: pointer;
 }
 #Apropos .descriptionContainer {
   display: flex;

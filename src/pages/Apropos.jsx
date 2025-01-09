@@ -56,7 +56,13 @@ export default function Apropos() {
   };
 
   return (
-    <m.main initial="initial" animate="animate" exit="exit" id="Apropos">
+    <m.main
+      onClick={() => history.back()}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      id="Apropos"
+    >
       <TitlePage title="A propos" />
       <div className="descriptionContainer">
         {AproposData[0].split(" ").map((word, i) => {

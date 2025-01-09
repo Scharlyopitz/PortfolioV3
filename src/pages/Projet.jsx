@@ -171,7 +171,10 @@ export default function Projet({
   return (
     <m.main initial="initial" animate="animate" exit="exit" id="Projet">
       <TitlePage title={rightProject.name} />
-      <div className={`Projet ${rightProject.rightTemplate && "right"}`}>
+      <div
+        onClick={() => history.back()}
+        className={`Projet ${rightProject.rightTemplate && "right"}`}
+      >
         <m.div variants={imageContainerAnime} className="image">
           <m.img
             variants={imageAnime}

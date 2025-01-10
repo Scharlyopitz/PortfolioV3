@@ -8,6 +8,8 @@
 
   p {
     position: relative;
+    font-size: 0.9vw;
+
     transition: opacity 0.3s;
     &::after {
       content: "open";

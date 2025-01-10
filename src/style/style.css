@@ -338,6 +338,7 @@ nav .AboutBtn:hover::before {
 }
 .Cursor p {
   position: relative;
+  font-size: 0.9vw;
   transition: opacity 0.3s;
 }
 .Cursor p::after {

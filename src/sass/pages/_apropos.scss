@@ -1,11 +1,10 @@
 #Apropos {
-  height: 100vh;
-
   &:hover {
     cursor: pointer;
   }
 
   .descriptionContainer {
+    position: fixed;
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
@@ -18,7 +17,7 @@
   }
 
   .contactContainer {
-    position: absolute;
+    position: fixed;
     left: 36%;
     bottom: 30px;
     display: flex;

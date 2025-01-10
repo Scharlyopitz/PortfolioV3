@@ -11,15 +11,10 @@ export default function Projet({
   animateTransiViaAbout,
   setanimateTransiViaAbout,
   setHovered,
-  setProjectNumber,
 }) {
   const { projet } = useParams();
 
   const rightProject = Projets.find((p) => p.linkPath === projet);
-
-  useEffect(() => {
-    setProjectNumber(rightProject.id - 1);
-  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -175,7 +170,13 @@ export default function Projet({
   };
 
   return (
-    <m.main initial="initial" animate="animate" exit="exit" id="Projet">
+    <m.main
+      style={{ height: `${100 * Projets.length}vh` }}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      id="Projet"
+    >
       <TitlePage title={rightProject.name} />
       <div
         onClick={() => history.back()}

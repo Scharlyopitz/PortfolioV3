@@ -18,8 +18,6 @@ export default function App() {
 
   const [hovered, setHovered] = useState(false);
 
-  const [projectNumber, setProjectNumber] = useState();
-
   useEffect(() => {
     setAbout(false);
     pathname === "/apropos" && setanimateTransiViaAbout(true);
@@ -47,10 +45,7 @@ export default function App() {
           <Route
             path="/"
             element={
-              <Home
-                setanimateTransiViaAbout={setanimateTransiViaAbout}
-                projectNumber={projectNumber}
-              />
+              <Home setanimateTransiViaAbout={setanimateTransiViaAbout} />
             }
           />
           <Route
@@ -61,7 +56,6 @@ export default function App() {
                 animateTransiViaAbout={animateTransiViaAbout}
                 setanimateTransiViaAbout={setanimateTransiViaAbout}
                 setHovered={setHovered}
-                setProjectNumber={setProjectNumber}
               />
             }
           />

@@ -175,6 +175,15 @@ nav .AboutBtn:hover::before {
   height: 100vh;
 }
 
+#Projet {
+  height: 100vh;
+}
+#Projet .Projet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 #Projet .Projet:hover {
   cursor: pointer;
 }
@@ -251,13 +260,11 @@ nav .AboutBtn:hover::before {
   left: 43.3vw;
 }
 
-#Apropos {
-  height: 100vh;
-}
 #Apropos:hover {
   cursor: pointer;
 }
 #Apropos .descriptionContainer {
+  position: fixed;
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
@@ -269,7 +276,7 @@ nav .AboutBtn:hover::before {
   font-size: 1.5vw;
 }
 #Apropos .contactContainer {
-  position: absolute;
+  position: fixed;
   left: 36%;
   bottom: 30px;
   display: flex;

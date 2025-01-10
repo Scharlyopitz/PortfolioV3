@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AproposData from "../assets/AproposData.json";
 import TitlePage from "../components/TitlePage";
 import { motion as m } from "motion/react";
+import Projets from "../assets/Projets.json";
 
 export default function Apropos({ setHovered }) {
   const socials = [
@@ -62,6 +63,7 @@ export default function Apropos({ setHovered }) {
 
   return (
     <m.main
+      style={{ height: `${100 * Projets.length}vh` }}
       onClick={() => history.back()}
       initial="initial"
       animate="animate"

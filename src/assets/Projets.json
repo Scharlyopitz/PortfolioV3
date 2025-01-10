@@ -5,7 +5,7 @@
     "linkPath": "wilhelm-opitz",
     "rightTemplate": false,
     "image": "/Wilhelm.webp",
-    "description": "Portfolio d'un graphiste, Wilhelm Opitz avec react, framer motion et emailJS pour l'envoie du formulaire de contact. Responsive design pour l'adaptation sur tout les écran et optimisation des images pour la fluidité du site ( compression des images et mise au format webp ).",
+    "description": "Wilhelm Opitz - Portfolio d'un graphiste avec ReactJS, framer motion et emailJS pour l'envoie du formulaire de contact. Responsive design pour l'adaptation sur tout les écran et optimisation des images pour la fluidité du site ( compression des images et mise au format webp ).",
     "lien": "https://wilhelmopitz.netlify.app/"
   },
   {
@@ -41,7 +41,7 @@
     "linkPath": "kasa",
     "rightTemplate": false,
     "image": "/Kasa.png",
-    "description": "Kasa - un projet de formation réalisé à Openclassrooms afin d'apprendre React. Le but, créer une application web de location immobilière, j'ai utilisé nodeJs côté backend pour prendre les informations et les ajoutés pour chaque logements et utilisé des composents réutilisables.",
+    "description": "Kasa - un projet de formation réalisé à Openclassrooms afin d'apprendre ReactJS. Le but, créer une application web de location immobilière, j'ai utilisé nodeJs côté backend pour prendre les informations et les ajoutés pour chaque logements et utilisé des composents réutilisables.",
     "lien": "https://github.com/Scharlyopitz/Projet-Kasa-OpenClassroom"
   },
   {

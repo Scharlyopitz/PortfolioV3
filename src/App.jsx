@@ -18,6 +18,8 @@ export default function App() {
 
   const [hovered, setHovered] = useState(false);
 
+  const [clickedProject, setClickedProject] = useState();
+
   useEffect(() => {
     setAbout(false);
     pathname === "/apropos" && setanimateTransiViaAbout(true);
@@ -25,7 +27,10 @@ export default function App() {
 
   useEffect(() => {
     // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP
-    // history.scrollRestoration = "manual";
+
+    if (!clickedProject) {
+      history.scrollRestoration = "manual";
+    }
 
     const lenis = new Lenis();
 
@@ -47,7 +52,10 @@ export default function App() {
           <Route
             path="/"
             element={
-              <Home setanimateTransiViaAbout={setanimateTransiViaAbout} />
+              <Home
+                setanimateTransiViaAbout={setanimateTransiViaAbout}
+                clickedProject={clickedProject}
+              />
             }
           />
           <Route
@@ -58,6 +66,7 @@ export default function App() {
                 animateTransiViaAbout={animateTransiViaAbout}
                 setanimateTransiViaAbout={setanimateTransiViaAbout}
                 setHovered={setHovered}
+                setClickedProject={setClickedProject}
               />
             }
           />

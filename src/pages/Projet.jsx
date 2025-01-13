@@ -11,10 +11,15 @@ export default function Projet({
   animateTransiViaAbout,
   setanimateTransiViaAbout,
   setHovered,
+  setClickedProject,
 }) {
   const { projet } = useParams();
 
   const rightProject = Projets.find((p) => p.linkPath === projet);
+
+  useEffect(() => {
+    setClickedProject(rightProject.id - 1);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {

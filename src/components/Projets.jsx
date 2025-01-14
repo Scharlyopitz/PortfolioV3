@@ -3,13 +3,32 @@ import ProjetsData from "../assets/Projets.json";
 import { useRef } from "react";
 import { useScroll, useTransform, motion as m, useInView } from "motion/react";
 
-export default function Projets() {
+export default function Projets({ animateTransiViaAbout, about }) {
+  const pageTransi = {
+    initial: {
+      opacity: animateTransiViaAbout ? 0 : 1,
+    },
+    animate: {
+      opacity: 1,
+      transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] },
+    },
+    exit: {
+      opacity: about ? 0 : 1,
+      transition: { duration: 0.8, ease: [0.65, 0, 0.35, 1] },
+    },
+  };
   return (
-    <div className="ProjetsContainer">
+    <m.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageTransi}
+      className="ProjetsContainer"
+    >
       {ProjetsData.map((projet, i) => {
         return <Projet key={i} projet={projet} index={i} />;
       })}
-    </div>
+    </m.div>
   );
 }
 

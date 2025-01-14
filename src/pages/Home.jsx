@@ -2,7 +2,12 @@ import { useEffect } from "react";
 import Projets from "../components/Projets";
 import TitlePage from "../components/TitlePage";
 
-export default function Home({ setanimateTransiViaAbout, clickedProject }) {
+export default function Home({
+  setanimateTransiViaAbout,
+  clickedProject,
+  animateTransiViaAbout,
+  about,
+}) {
   useEffect(() => {
     window.scrollTo({ top: (window.innerHeight + 0.3) * clickedProject });
   }, [clickedProject]);
@@ -14,7 +19,7 @@ export default function Home({ setanimateTransiViaAbout, clickedProject }) {
   return (
     <main>
       <TitlePage title="Portfolio" />
-      <Projets />
+      <Projets animateTransiViaAbout={animateTransiViaAbout} about={about} />
     </main>
   );
 }

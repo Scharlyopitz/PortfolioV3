@@ -55,6 +55,8 @@ export default function App() {
               <Home
                 setanimateTransiViaAbout={setanimateTransiViaAbout}
                 clickedProject={clickedProject}
+                animateTransiViaAbout={animateTransiViaAbout}
+                about={about}
               />
             }
           />

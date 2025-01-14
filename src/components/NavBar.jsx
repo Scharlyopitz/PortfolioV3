@@ -2,8 +2,22 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "/Logo.png";
 import { AnimatePresence, motion as m } from "motion/react";
 
-export default function NavBar({ setAbout, setHovered }) {
+export default function NavBar({ setAbout, setHovered, loader }) {
   const { pathname } = useLocation();
+
+  const logoAnimation = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.9,
+        delay: loader ? 2.25 : 0.8,
+        ease: [0.33, 1, 0.68, 1],
+      },
+    },
+  };
 
   const buttonAnimation = {
     initial: {
@@ -11,7 +25,11 @@ export default function NavBar({ setAbout, setHovered }) {
     },
     animate: {
       y: "0%",
-      transition: { duration: 0.9, delay: 0.8, ease: [0.33, 1, 0.68, 1] },
+      transition: {
+        duration: 0.9,
+        delay: loader ? 2.25 : 0.8,
+        ease: [0.33, 1, 0.68, 1],
+      },
     },
     exit: {
       y: "105%",
@@ -25,19 +43,14 @@ export default function NavBar({ setAbout, setHovered }) {
   }
 
   return (
-    <nav>
-      <Link to="/" className="logoContainer">
-        <img src={Logo} alt="logo" />
+    <m.nav initial="initial" animate="animate" exit="exit">
+      <Link to="/" className="logoContainer hidden">
+        <m.img variants={logoAnimation} src={Logo} alt="logo" />
       </Link>
       <AnimatePresence>
         {pathname !== "/apropos" && (
           <div className="hidden">
-            <m.div
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              variants={buttonAnimation}
-            >
+            <m.div variants={buttonAnimation}>
               <Link
                 to="/apropos"
                 onClick={() => handleClick()}
@@ -51,6 +64,6 @@ export default function NavBar({ setAbout, setHovered }) {
           </div>
         )}
       </AnimatePresence>
-    </nav>
+    </m.nav>
   );
 }

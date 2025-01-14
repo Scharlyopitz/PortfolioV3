@@ -12,6 +12,7 @@ export default function Projet({
   setanimateTransiViaAbout,
   setHovered,
   setClickedProject,
+  loader,
 }) {
   const { projet } = useParams();
 
@@ -30,12 +31,16 @@ export default function Projet({
   const titleAnime = {
     initial: {
       y: 0,
-      opacity: animateTransiViaAbout ? 0 : 1,
+      opacity: animateTransiViaAbout || loader ? 0 : 1,
     },
     animate: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+      transition: {
+        duration: 0.75,
+        delay: loader ? 2.25 : 0,
+        ease: [0.65, 0, 0.35, 1],
+      },
     },
     exit: {
       y: 0,
@@ -69,7 +74,11 @@ export default function Projet({
     animate: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.75, delay: 0.3, ease: [0.33, 1, 0.68, 1] },
+      transition: {
+        duration: 0.75,
+        delay: loader ? 2.25 : 0.3,
+        ease: [0.33, 1, 0.68, 1],
+      },
     },
     exit: {
       y: "105%",
@@ -126,7 +135,7 @@ export default function Projet({
       opacity: 1,
       transition: {
         duration: 0.75,
-        delay: 0.007 * i,
+        delay: loader ? 2.25 + 0.007 * i : 0.007 * i,
         ease: [0.33, 1, 0.68, 1],
       },
     }),
@@ -167,10 +176,13 @@ export default function Projet({
 
   const staggerIndex = {
     animate: {
-      transition: { staggerChildren: 0.07 },
+      transition: { delayChildren: loader ? 2.25 : 0, staggerChildren: 0.07 },
     },
     exit: {
-      transition: { staggerChildren: 0.07, staggerDirection: 1 },
+      transition: {
+        staggerChildren: 0.07,
+        staggerDirection: 1,
+      },
     },
   };
 

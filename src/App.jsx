@@ -47,10 +47,10 @@ export default function App() {
 
   return (
     <>
-      <NavBar setAbout={setAbout} setHovered={setHovered} />
+      <NavBar setAbout={setAbout} setHovered={setHovered} loader={loader} />
       <Cursor hovered={hovered} />
       <Background />
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait">
         <Routes location={pathname} key={pathname}>
           <Route
             path="/"
@@ -72,6 +72,7 @@ export default function App() {
                 setanimateTransiViaAbout={setanimateTransiViaAbout}
                 setHovered={setHovered}
                 setClickedProject={setClickedProject}
+                loader={loader}
               />
             }
           />

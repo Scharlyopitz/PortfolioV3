@@ -60,6 +60,7 @@ export default function App() {
                 clickedProject={clickedProject}
                 animateTransiViaAbout={animateTransiViaAbout}
                 about={about}
+                loader={loader}
               />
             }
           />

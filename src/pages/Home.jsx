@@ -7,6 +7,7 @@ export default function Home({
   clickedProject,
   animateTransiViaAbout,
   about,
+  loader,
 }) {
   useEffect(() => {
     window.scrollTo({ top: (window.innerHeight + 0.3) * clickedProject });
@@ -19,7 +20,11 @@ export default function Home({
   return (
     <main>
       <TitlePage title="Portfolio" />
-      <Projets animateTransiViaAbout={animateTransiViaAbout} about={about} />
+      <Projets
+        animateTransiViaAbout={animateTransiViaAbout}
+        about={about}
+        loader={loader}
+      />
     </main>
   );
 }

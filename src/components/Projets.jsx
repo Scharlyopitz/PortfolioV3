@@ -3,7 +3,7 @@ import ProjetsData from "../assets/Projets.json";
 import { useRef } from "react";
 import { useScroll, useTransform, motion as m, useInView } from "motion/react";
 
-export default function Projets({ animateTransiViaAbout, about }) {
+export default function Projets({ animateTransiViaAbout, about, loader }) {
   const pageTransi = {
     initial: {
       opacity: animateTransiViaAbout ? 0 : 1,
@@ -26,13 +26,13 @@ export default function Projets({ animateTransiViaAbout, about }) {
       className="ProjetsContainer"
     >
       {ProjetsData.map((projet, i) => {
-        return <Projet key={i} projet={projet} index={i} />;
+        return <Projet key={i} projet={projet} index={i} loader={loader} />;
       })}
     </m.div>
   );
 }
 
-function Projet({ projet, index }) {
+function Projet({ projet, index, loader }) {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -46,10 +46,23 @@ function Projet({ projet, index }) {
 
   const isInView = useInView(titleRef, { margin: "-50px 0px -50px 0px" });
 
+  const titleForLoader = {
+    initial: {
+      opacity: loader ? 0 : 1,
+    },
+    animate: {
+      opacity: 1,
+      transition: { duration: 0.8, delay: 2.25, ease: [0.65, 0, 0.35, 1] },
+    },
+  };
+
   const titleAnime = {
     show: {
       y: "0",
-      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+      transition: {
+        duration: 0.75,
+        ease: [0.65, 0, 0.35, 1],
+      },
     },
     hidden: {
       y: "105%",
@@ -57,12 +70,54 @@ function Projet({ projet, index }) {
     },
   };
 
+  const containerImageLoader = {
+    initial: {
+      clipPath: loader
+        ? "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)"
+        : "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      willChange: "clip-path",
+    },
+    animate: {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+
+      transition: {
+        duration: 1,
+        delay: loader ? 2.25 : 0,
+        ease: [0.76, 0, 0.24, 1],
+      },
+    },
+  };
+
+  const imageLoader = {
+    initial: {
+      scale: loader ? 0.77 : 1,
+      willChange: "transform",
+    },
+    animate: {
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        delay: loader ? 2.25 : 0,
+        ease: [0.76, 0, 0.24, 1],
+      },
+    },
+  };
+
   return (
     <Link to={projet.linkPath} className="Projet">
-      <div ref={containerRef} className="image">
-        <m.img style={{ y }} src={projet.image} alt={projet.name} />
-      </div>
-      <div className="titleContainer">
+      <m.div
+        ref={containerRef}
+        variants={containerImageLoader}
+        className="image"
+      >
+        <m.img
+          style={{ y }}
+          variants={imageLoader}
+          src={projet.image}
+          alt={projet.name}
+        />
+      </m.div>
+      <m.div variants={titleForLoader} className="titleContainer">
         <m.div ref={titleRef} className="title hidden">
           <m.h1
             initial="show"
@@ -79,7 +134,7 @@ function Projet({ projet, index }) {
             {projet.name}
           </m.h1>
         </m.div>
-      </div>
+      </m.div>
     </Link>
   );
 }

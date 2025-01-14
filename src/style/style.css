@@ -175,6 +175,47 @@ nav .AboutBtn:hover::before {
   height: 100vh;
 }
 
+.Loader {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Loader .content {
+  will-change: transform;
+}
+.Loader .content .hidden {
+  display: flex;
+}
+.Loader .content .hidden:nth-child(odd) {
+  justify-content: end;
+}
+.Loader .content .hidden.rightTemplate:nth-child(odd) {
+  justify-content: start;
+}
+.Loader .content .hidden.rightTemplate:nth-child(even) {
+  justify-content: end;
+}
+.Loader .content .hidden .image {
+  height: 100vh;
+  width: 50%;
+  -webkit-clip-path: polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%);
+          clip-path: polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%);
+}
+.Loader .content .hidden .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transform: scale(0.77);
+}
+
 #Projet {
   height: 100vh;
 }

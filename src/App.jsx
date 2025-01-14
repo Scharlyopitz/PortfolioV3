@@ -8,6 +8,7 @@ import Background from "./components/Background";
 import NavBar from "./components/NavBar";
 import { AnimatePresence } from "motion/react";
 import Cursor from "./utils/Cursor";
+import Loader from "./components/Loader";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -19,6 +20,8 @@ export default function App() {
   const [hovered, setHovered] = useState(false);
 
   const [clickedProject, setClickedProject] = useState();
+
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     setAbout(false);
@@ -78,6 +81,7 @@ export default function App() {
           />
         </Routes>
       </AnimatePresence>
+      {loader && <Loader setLoader={setLoader} />}
     </>
   );
 }

@@ -176,7 +176,6 @@ nav .AboutBtn:hover::before {
 }
 
 .Loader {
-  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -184,6 +183,7 @@ nav .AboutBtn:hover::before {
   display: flex;
   flex-direction: column;
   width: 100%;
+  cursor: auto;
 }
 .Loader .content {
   will-change: transform;

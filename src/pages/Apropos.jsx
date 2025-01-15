@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AproposData from "../assets/AproposData.json";
 import TitlePage from "../components/TitlePage";
 import { motion as m } from "motion/react";
 import Projets from "../assets/Projets.json";
+import { useEffect } from "react";
 
 export default function Apropos({ setHovered, loader }) {
   const socials = [
@@ -60,6 +61,12 @@ export default function Apropos({ setHovered, loader }) {
       transition: { duration: 0.75, delay: 0.2, ease: [0.65, 0, 0.35, 1] },
     },
   };
+
+  const navigate = useNavigate();
+
+  if (loader) {
+    navigate("/");
+  }
 
   return (
     <m.main

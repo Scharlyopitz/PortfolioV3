@@ -45,7 +45,7 @@ export default function Projet({
     exit: {
       y: 0,
       opacity: about ? 0 : 1,
-      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: about ? 0.5 : 0.75, ease: [0.65, 0, 0.35, 1] },
     },
   };
 
@@ -62,7 +62,7 @@ export default function Projet({
     exit: {
       y: about ? "105%" : 0,
       opacity: 1,
-      transition: { duration: 0.8, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: about ? 0.5 : 0.8, ease: [0.65, 0, 0.35, 1] },
     },
   };
 
@@ -83,7 +83,7 @@ export default function Projet({
     exit: {
       y: "105%",
       opacity: 0,
-      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: about ? 0.5 : 0.75, ease: [0.65, 0, 0.35, 1] },
     },
   };
 
@@ -104,7 +104,7 @@ export default function Projet({
       clipPath: about
         ? "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)"
         : "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-      transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: about ? 0.5 : 1, ease: [0.76, 0, 0.24, 1] },
     },
   };
 
@@ -120,7 +120,7 @@ export default function Projet({
     exit: {
       scale: about ? 0.77 : 1,
       opacity: about ? 0 : 1,
-      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: about ? 0.5 : 0.8, ease: [0.76, 0, 0.24, 1] },
     },
   };
 
@@ -143,7 +143,7 @@ export default function Projet({
       y: "105%",
       opacity: 0,
       transition: {
-        duration: 0.75,
+        duration: about ? 0.5 : 0.75,
         delay: 0.003 * i,
         ease: [0.65, 0, 0.35, 1],
       },
@@ -168,7 +168,7 @@ export default function Projet({
       y: "105%",
       opacity: 0,
       transition: {
-        duration: 0.75,
+        duration: about ? 0.5 : 0.75,
         ease: [0.65, 0, 0.35, 1],
       },
     },

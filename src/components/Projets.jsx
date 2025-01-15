@@ -10,7 +10,7 @@ export default function Projets({ animateTransiViaAbout, about, loader }) {
     },
     animate: {
       opacity: 1,
-      transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] },
+      transition: { duration: 1.2, ease: [0.33, 1, 0.68, 1] },
     },
     exit: {
       opacity: about ? 0 : 1,

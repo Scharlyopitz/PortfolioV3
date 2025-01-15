@@ -202,7 +202,7 @@ export default function Projet({
     },
     exit: {
       transition: {
-        staggerChildren: 0.07,
+        staggerChildren: about ? 0 : 0.07,
         staggerDirection: 1,
       },
     },

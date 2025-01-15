@@ -380,6 +380,7 @@ nav .AboutBtn:hover::before {
   text-transform: uppercase;
   pointer-events: none;
   padding: 20px;
+  transition: opacity 0.5s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .Cursor p {
   position: relative;

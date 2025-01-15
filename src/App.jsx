@@ -48,7 +48,7 @@ export default function App() {
   return (
     <>
       <NavBar setAbout={setAbout} setHovered={setHovered} loader={loader} />
-      <Cursor hovered={hovered} />
+      <Cursor hovered={hovered} loader={loader} />
       <Background />
       <AnimatePresence mode="wait">
         <Routes location={pathname} key={pathname}>

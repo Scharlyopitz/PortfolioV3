@@ -2,7 +2,7 @@ import { AnimatePresence, motion as m } from "motion/react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-export default function Cursor({ hovered }) {
+export default function Cursor({ hovered, loader }) {
   const { pathname } = useLocation();
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -28,6 +28,7 @@ export default function Cursor({ hovered }) {
     <m.div
       animate={{ y: mousePosition.y, x: mousePosition.x }}
       transition={{ type: "keyframes", ease: "backOut" }}
+      style={{ opacity: loader ? 0 : 1 }}
       className="Cursor"
     >
       <m.div

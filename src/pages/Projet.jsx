@@ -39,7 +39,7 @@ export default function Projet({
       transition: {
         duration: 0.75,
         delay: loader ? 2.25 : 0,
-        ease: [0.65, 0, 0.35, 1],
+        ease: animateTransiViaAbout ? [0.33, 1, 0.68, 1] : [0.65, 0, 0.35, 1],
       },
     },
     exit: {
@@ -66,9 +66,12 @@ export default function Projet({
     },
   };
 
+  const delayAnime = animateTransiViaAbout ? 0 : 0.3;
+
   const buttonSiteAnime = {
     initial: {
-      y: "105%",
+      y: animateTransiViaAbout ? 0 : "105%",
+      opacity: 0,
       willChange: "transform",
     },
     animate: {
@@ -76,12 +79,12 @@ export default function Projet({
       opacity: 1,
       transition: {
         duration: 0.75,
-        delay: loader ? 2.25 : 0.3,
+        delay: loader ? 2.25 : delayAnime,
         ease: [0.33, 1, 0.68, 1],
       },
     },
     exit: {
-      y: "105%",
+      y: about ? 0 : "105%",
       opacity: 0,
       transition: { duration: about ? 0.5 : 0.75, ease: [0.65, 0, 0.35, 1] },
     },
@@ -98,7 +101,10 @@ export default function Projet({
     animate: {
       clipPath: "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)",
       opacity: 1,
-      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+      transition: {
+        duration: 0.8,
+        ease: animateTransiViaAbout ? [0.33, 1, 0.68, 1] : [0.76, 0, 0.24, 1],
+      },
     },
     exit: {
       clipPath: about
@@ -126,33 +132,7 @@ export default function Projet({
 
   const descriptionAnime = {
     initial: {
-      y: "105%",
-      opacity: 0,
-      willChange: "transform",
-    },
-    animate: (i) => ({
-      y: "0",
-      opacity: 1,
-      transition: {
-        duration: 0.75,
-        delay: loader ? 2.25 + 0.007 * i : 0.007 * i,
-        ease: [0.33, 1, 0.68, 1],
-      },
-    }),
-    exit: (i) => ({
-      y: "105%",
-      opacity: 0,
-      transition: {
-        duration: about ? 0.5 : 0.75,
-        delay: 0.003 * i,
-        ease: [0.65, 0, 0.35, 1],
-      },
-    }),
-  };
-
-  const indexAnime = {
-    initial: {
-      y: "105%",
+      y: animateTransiViaAbout ? "0" : "105%",
       opacity: 0,
       willChange: "transform",
     },
@@ -165,7 +145,46 @@ export default function Projet({
       },
     },
     exit: {
-      y: "105%",
+      y: about ? "0" : "105%",
+      opacity: 0,
+      transition: {
+        duration: about ? 0.5 : 0.75,
+        ease: [0.65, 0, 0.35, 1],
+      },
+    },
+  };
+
+  const staggerDescription = {
+    animate: {
+      transition: {
+        delayChildren: loader ? 2.25 : 0,
+        staggerChildren: animateTransiViaAbout ? 0 : 0.007,
+      },
+    },
+    exit: {
+      transition: {
+        staggerChildren: about ? 0 : 0.003,
+        staggerDirection: 1,
+      },
+    },
+  };
+
+  const indexAnime = {
+    initial: {
+      y: animateTransiViaAbout ? "0" : "105%",
+      opacity: 0,
+      willChange: "transform",
+    },
+    animate: {
+      y: "0",
+      opacity: 1,
+      transition: {
+        duration: 0.75,
+        ease: [0.33, 1, 0.68, 1],
+      },
+    },
+    exit: {
+      y: about ? "0" : "105%",
       opacity: 0,
       transition: {
         duration: about ? 0.5 : 0.75,
@@ -176,7 +195,10 @@ export default function Projet({
 
   const staggerIndex = {
     animate: {
-      transition: { delayChildren: loader ? 2.25 : 0, staggerChildren: 0.07 },
+      transition: {
+        delayChildren: loader ? 2.25 : 0,
+        staggerChildren: animateTransiViaAbout ? 0 : 0.07,
+      },
     },
     exit: {
       transition: {
@@ -210,17 +232,18 @@ export default function Projet({
           <m.span variants={indexAnime}>index</m.span>
           <m.span variants={indexAnime}>/ 0{rightProject.id}</m.span>
         </m.div>
-        <div className={`description ${rightProject.rightTemplate && "right"}`}>
+        <m.div
+          variants={staggerDescription}
+          className={`description ${rightProject.rightTemplate && "right"}`}
+        >
           {rightProject.description.split(" ").map((word, i) => {
             return (
               <div key={i} className="hidden">
-                <m.p custom={i} variants={descriptionAnime}>
-                  {word}
-                </m.p>
+                <m.p variants={descriptionAnime}>{word}</m.p>
               </div>
             );
           })}
-        </div>
+        </m.div>
         <div className="titleContainer">
           <div className="title">
             <Link

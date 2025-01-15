@@ -17,6 +17,7 @@ export default function Projets({ animateTransiViaAbout, about, loader }) {
       transition: { duration: 0.8, ease: [0.65, 0, 0.35, 1] },
     },
   };
+
   return (
     <m.div
       initial="initial"

@@ -1,4 +1,4 @@
-import Wilhelm from "/Wilhelm.webp";
+import Wilhelm from "/WilhelmPaysage.jpg";
 import Booki from "/Booki.jpg";
 import Kasa from "/Kasa.png";
 import Ohmyfood from "/Ohmyfood.jpg";

@@ -4,7 +4,7 @@
     "name": "Wilhelm Opitz",
     "linkPath": "wilhelm-opitz",
     "rightTemplate": false,
-    "image": "/WilhelmPaysage.jpg",
+    "image": "/WilhelmPortrait.jpg",
     "description": "Wilhelm Opitz - Portfolio d'un graphiste avec ReactJS, framer motion et emailJS pour l'envoie du formulaire de contact. Responsive design pour l'adaptation sur tout les écran et optimisation des images pour la fluidité du site ( compression des images et mise au format webp ).",
     "lien": "https://wilhelmopitz.netlify.app/"
   },

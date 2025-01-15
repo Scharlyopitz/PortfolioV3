@@ -79,7 +79,7 @@ export default function App() {
           />
           <Route
             path="/apropos"
-            element={<Apropos setHovered={setHovered} />}
+            element={<Apropos setHovered={setHovered} loader={loader} />}
           />
         </Routes>
       </AnimatePresence>

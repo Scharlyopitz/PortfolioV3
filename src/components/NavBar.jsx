@@ -14,7 +14,7 @@ export default function NavBar({ setAbout, setHovered, loader }) {
       transition: {
         duration: 0.9,
         delay: loader ? 2.25 : 0.8,
-        ease: [0.33, 1, 0.68, 1],
+        ease: [0.65, 0, 0.35, 1],
       },
     },
   };

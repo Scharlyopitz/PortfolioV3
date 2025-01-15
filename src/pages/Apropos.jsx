@@ -4,7 +4,7 @@ import TitlePage from "../components/TitlePage";
 import { motion as m } from "motion/react";
 import Projets from "../assets/Projets.json";
 
-export default function Apropos({ setHovered }) {
+export default function Apropos({ setHovered, loader }) {
   const socials = [
     { name: "Github", link: "https://github.com/Scharlyopitz" },
     {
@@ -24,7 +24,7 @@ export default function Apropos({ setHovered }) {
       opacity: 1,
       transition: {
         duration: 0.75,
-        delay: 0.007 * i,
+        delay: loader ? 2.25 + 0.007 * i : 0.007 * i,
         ease: [0.33, 1, 0.68, 1],
       },
     }),
@@ -50,7 +50,7 @@ export default function Apropos({ setHovered }) {
       opacity: 1,
       transition: {
         duration: 0.75,
-        delay: 0.3,
+        delay: loader ? 2.25 + 0.3 : 0.3,
         ease: [0.33, 1, 0.68, 1],
       },
     },

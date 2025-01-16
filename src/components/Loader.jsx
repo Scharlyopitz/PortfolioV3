@@ -1,7 +1,7 @@
-import Wilhelm from "/WilhelmPortrait.jpg";
-import Booki from "/Booki.jpg";
-import Kasa from "/Kasa.png";
-import Ohmyfood from "/Ohmyfood.jpg";
+import Wilhelm from "/WilhelmPortrait.webp";
+import Booki from "/Booki.webp";
+import Kasa from "/Kasa.webp";
+import Ohmyfood from "/Ohmyfood.webp";
 import SophieBluel from "/SophieBluel.webp";
 import Projet9 from "/Projet9.webp";
 import { useLocation } from "react-router-dom";

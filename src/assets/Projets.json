@@ -4,7 +4,7 @@
     "name": "Wilhelm Opitz",
     "linkPath": "wilhelm-opitz",
     "rightTemplate": false,
-    "image": "/WilhelmPortrait.jpg",
+    "image": "/WilhelmPortrait.webp",
     "description": "Wilhelm Opitz - Portfolio d'un graphiste avec ReactJS, framer motion et emailJS pour l'envoie du formulaire de contact. Responsive design pour l'adaptation sur tout les écran et optimisation des images pour la fluidité du site ( compression des images et mise au format webp ).",
     "lien": "https://wilhelmopitz.netlify.app/"
   },
@@ -13,7 +13,7 @@
     "name": "Booki",
     "linkPath": "booki",
     "rightTemplate": true,
-    "image": "/Booki.jpg",
+    "image": "/Booki.webp",
     "description": "Booki - un projet de formation réalisé à Openclassrooms afin d'apprendre le Html/css. Le but, développer la page d'accueil d'une agence de voyage avec HTML & CSS et faire en sorte que la page soit responsive.",
     "lien": "https://scharlyopitz.github.io/Projet-Booki/"
   },
@@ -22,7 +22,7 @@
     "name": "OhmyFood",
     "linkPath": "ohmyfood",
     "rightTemplate": false,
-    "image": "/Ohmyfood.jpg",
+    "image": "/Ohmyfood.webp",
     "description": "OhMyFood - un projet de formation réalisé à OpenClassrooms afin d’apprendre les animations CSS. Basé sur une maquette Figma en mobile first, j’ai intégré une page d’accueil, quatre pages de menu de restaurants et un loader.",
     "lien": "https://scharlyopitz.github.io/Ohmyfood/"
   },
@@ -40,7 +40,7 @@
     "name": "Kasa",
     "linkPath": "kasa",
     "rightTemplate": false,
-    "image": "/Kasa.png",
+    "image": "/Kasa.webp",
     "description": "Kasa - un projet de formation réalisé à Openclassrooms afin d'apprendre ReactJS. Le but, créer une application web de location immobilière, j'ai utilisé nodeJs côté backend pour prendre les informations et les ajoutés pour chaque logements et utilisé des composents réutilisables.",
     "lien": "https://github.com/Scharlyopitz/Projet-Kasa-OpenClassroom"
   },

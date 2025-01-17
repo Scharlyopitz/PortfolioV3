@@ -48,11 +48,9 @@ export default function Loader({ setLoader }) {
   };
 
   return (
-    <div className="Loader">
+    <m.div initial="initial" animate="animate" className="Loader">
       <Background />
       <m.div
-        initial="initial"
-        animate="animate"
         variants={animeLoader}
         onAnimationComplete={() => setLoader(false)}
         className="content"
@@ -67,6 +65,6 @@ export default function Loader({ setLoader }) {
           );
         })}
       </m.div>
-    </div>
+    </m.div>
   );
 }

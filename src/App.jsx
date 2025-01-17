@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import { AnimatePresence } from "motion/react";
 import Cursor from "./utils/Cursor";
 import Loader from "./components/Loader";
+import Counter from "./components/Counter";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -48,6 +49,7 @@ export default function App() {
   return (
     <>
       <NavBar setAbout={setAbout} setHovered={setHovered} loader={loader} />
+      <Counter loader={loader} />
       <Cursor hovered={hovered} loader={loader} />
       <Background />
       <AnimatePresence mode="wait">
@@ -83,6 +85,7 @@ export default function App() {
           />
         </Routes>
       </AnimatePresence>
+
       {loader && <Loader setLoader={setLoader} />}
     </>
   );

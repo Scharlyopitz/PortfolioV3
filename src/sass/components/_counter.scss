@@ -1,0 +1,10 @@
+.Counter {
+  position: fixed;
+  z-index: 10000;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  .number {
+    font-size: 1vw;
+  }
+}

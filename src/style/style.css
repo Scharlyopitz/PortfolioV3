@@ -175,6 +175,17 @@ nav .AboutBtn:hover::before {
   height: 100vh;
 }
 
+.Counter {
+  position: fixed;
+  z-index: 10000;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Counter .number {
+  font-size: 1vw;
+}
+
 .Loader {
   position: fixed;
   top: 0;

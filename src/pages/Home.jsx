@@ -10,7 +10,7 @@ export default function Home({
   loader,
 }) {
   useEffect(() => {
-    window.scrollTo({ top: (window.innerHeight + 0.3) * clickedProject });
+    window.scrollTo({ top: (window.innerHeight + 0.5) * clickedProject });
   }, [clickedProject]);
 
   useEffect(() => {

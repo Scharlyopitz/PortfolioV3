@@ -34,6 +34,11 @@ p {
   overflow: hidden;
 }
 
+@media (max-width: 1024px) {
+  p {
+    font-size: 12px;
+  }
+}
 html.lenis,
 html.lenis body {
   height: auto;

@@ -25,6 +25,16 @@ export default function App() {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
+    if (loader) {
+      document.body.style.overflow = "hidden";
+      document.body.setAttribute("data-lenis-prevent", "true");
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.removeAttribute("data-lenis-prevent", "true");
+    }
+  }, [loader]);
+
+  useEffect(() => {
     setAbout(false);
     pathname === "/apropos" && setanimateTransiViaAbout(true);
   }, [pathname]);

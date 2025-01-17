@@ -408,4 +408,10 @@ nav .AboutBtn:hover::before {
   position: absolute;
   bottom: 100%;
   left: 0;
+}
+
+@media (max-width: 1024px) {
+  .Cursor {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

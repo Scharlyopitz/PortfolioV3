@@ -31,15 +31,21 @@ export default function Loader({ setLoader }) {
     { src: Wilhelm },
     { src: Booki },
     { src: Ohmyfood },
+    { src: Booki },
+    { src: Ohmyfood },
     { src: rightImage[pathname] },
   ];
 
+  const calculTranslateInitial = 100 / images.length + 1;
+
+  const calculTranslateAnimate = (100 / images.length) * (images.length - 1);
+
   const animeLoader = {
     initial: {
-      y: "26%",
+      y: `${calculTranslateInitial}%`,
     },
     animate: {
-      y: "-75%",
+      y: `-${calculTranslateAnimate}%`,
       transition: {
         duration: 2.25,
         ease: [0.65, 0, 0.35, 1],

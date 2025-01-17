@@ -125,6 +125,11 @@ nav .AboutBtn:hover::before {
   transform: translate(100%, -50%);
 }
 
+@media (max-width: 1024px) {
+  nav .AboutBtn {
+    font-size: 12px;
+  }
+}
 .Projet {
   position: relative;
   display: flex;

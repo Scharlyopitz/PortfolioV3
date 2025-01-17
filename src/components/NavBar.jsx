@@ -50,7 +50,12 @@ export default function NavBar({ setAbout, setHovered, loader }) {
       <AnimatePresence>
         {pathname !== "/apropos" && (
           <div className="hidden">
-            <m.div variants={buttonAnimation}>
+            <m.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={buttonAnimation}
+            >
               <Link
                 to="/apropos"
                 onClick={() => handleClick()}

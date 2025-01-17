@@ -10,7 +10,7 @@ export default function Counter({ loader }) {
       y: 0,
     },
     animate: {
-      y: "-87vh",
+      y: "calc(-50vh + 20px + 1vw)",
       transition: { duration: 2.25, ease: [0.65, 0, 0.35, 1] },
     },
   };

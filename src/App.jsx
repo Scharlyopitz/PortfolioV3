@@ -49,7 +49,7 @@ export default function App() {
   return (
     <>
       <NavBar setAbout={setAbout} setHovered={setHovered} loader={loader} />
-      <Counter loader={loader} />
+
       <Cursor hovered={hovered} loader={loader} />
       <Background />
       <AnimatePresence mode="wait">
@@ -85,7 +85,7 @@ export default function App() {
           />
         </Routes>
       </AnimatePresence>
-
+      <Counter loader={loader} />
       {loader && <Loader setLoader={setLoader} />}
     </>
   );

@@ -45,7 +45,7 @@ function Projet({ projet, index, loader }) {
 
   const titleRef = useRef(null);
 
-  const isInView = useInView(titleRef, { margin: "-50px 0px -50px 0px" });
+  const isInView = useInView(titleRef);
 
   const titleForLoader = {
     initial: {

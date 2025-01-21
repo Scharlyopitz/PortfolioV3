@@ -144,7 +144,7 @@ function Projet({ projet, index, loader, mobile }) {
         className="image"
       >
         <m.img
-          style={{ y }}
+          style={{ translateY: mobile ? 0 : y }}
           variants={mobile ? mobileImageTransi : imageLoader}
           src={projet.image}
           alt={projet.name}

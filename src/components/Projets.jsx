@@ -3,7 +3,12 @@ import ProjetsData from "../assets/Projets.json";
 import { useRef } from "react";
 import { useScroll, useTransform, motion as m, useInView } from "motion/react";
 
-export default function Projets({ animateTransiViaAbout, about, loader }) {
+export default function Projets({
+  animateTransiViaAbout,
+  about,
+  loader,
+  mobile,
+}) {
   const pageTransi = {
     initial: {
       opacity: animateTransiViaAbout ? 0 : 1,
@@ -27,13 +32,21 @@ export default function Projets({ animateTransiViaAbout, about, loader }) {
       className="ProjetsContainer"
     >
       {ProjetsData.map((projet, i) => {
-        return <Projet key={i} projet={projet} index={i} loader={loader} />;
+        return (
+          <Projet
+            key={i}
+            projet={projet}
+            index={i}
+            loader={loader}
+            mobile={mobile}
+          />
+        );
       })}
     </m.div>
   );
 }
 
-function Projet({ projet, index, loader }) {
+function Projet({ projet, index, loader, mobile }) {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -60,6 +73,7 @@ function Projet({ projet, index, loader }) {
   const titleAnime = {
     show: {
       y: "0",
+      opacity: 1,
       transition: {
         duration: 0.75,
         ease: [0.65, 0, 0.35, 1],
@@ -67,7 +81,17 @@ function Projet({ projet, index, loader }) {
     },
     hidden: {
       y: "105%",
+      opacity: 0,
       transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+    },
+  };
+
+  const mobileTransi = {
+    initial: {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+    },
+    animate: {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
     },
   };
 
@@ -89,6 +113,15 @@ function Projet({ projet, index, loader }) {
     },
   };
 
+  const mobileImageTransi = {
+    initial: {
+      scale: "1",
+    },
+    animate: {
+      scale: "1",
+    },
+  };
+
   const imageLoader = {
     initial: {
       scale: loader ? 0.77 : 1,
@@ -105,15 +138,14 @@ function Projet({ projet, index, loader }) {
   };
 
   return (
-    <Link to={projet.linkPath} className="Projet">
+    <Link to={projet.linkPath} ref={containerRef} className="Projet">
       <m.div
-        ref={containerRef}
-        variants={containerImageLoader}
+        variants={mobile ? mobileTransi : containerImageLoader}
         className="image"
       >
         <m.img
           style={{ y }}
-          variants={imageLoader}
+          variants={mobile ? mobileImageTransi : imageLoader}
           src={projet.image}
           alt={projet.name}
         />

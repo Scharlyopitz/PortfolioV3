@@ -70,10 +70,15 @@ nav {
   }
 }
 
-// @media (max-width: 1024px) {
-//   nav {
-//     .AboutBtn {
-//       font-size: 12px;
-//     }
-//   }
-// }
+@media (max-width: 1024px) {
+  nav {
+    mix-blend-mode: normal;
+    padding: 20px 5vw;
+    .logoContainer {
+      width: 45px;
+    }
+    .AboutBtn {
+      font-size: 16px;
+    }
+  }
+}

@@ -13,6 +13,7 @@ export default function Projet({
   setHovered,
   setClickedProject,
   loader,
+  mobile,
 }) {
   const { projet } = useParams();
 
@@ -90,6 +91,26 @@ export default function Projet({
     },
   };
 
+  const imageContainerMobile = {
+    initial: {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      opacity: animateTransiViaAbout ? 0 : 1,
+      willChange: "clip-path",
+    },
+    animate: {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: animateTransiViaAbout ? [0.33, 1, 0.68, 1] : [0.76, 0, 0.24, 1],
+      },
+    },
+    exit: {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      transition: { duration: about ? 0.5 : 1, ease: [0.76, 0, 0.24, 1] },
+    },
+  };
+
   const imageContainerAnime = {
     initial: {
       clipPath: animateTransiViaAbout
@@ -111,6 +132,20 @@ export default function Projet({
         ? "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)"
         : "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       transition: { duration: about ? 0.5 : 1, ease: [0.76, 0, 0.24, 1] },
+    },
+  };
+
+  const imageAnimeMobile = {
+    initial: {
+      scale: "1",
+    },
+    animate: {
+      scale: "1",
+    },
+    exit: {
+      scale: "1",
+      opacity: about ? 0 : 1,
+      transition: { duration: about ? 0.5 : 0.8, ease: [0.76, 0, 0.24, 1] },
     },
   };
 
@@ -221,9 +256,12 @@ export default function Projet({
         onClick={() => history.back()}
         className={`Projet ${rightProject.rightTemplate && "right"}`}
       >
-        <m.div variants={imageContainerAnime} className="image">
+        <m.div
+          variants={mobile ? imageContainerMobile : imageContainerAnime}
+          className="image"
+        >
           <m.img
-            variants={imageAnime}
+            variants={mobile ? imageAnimeMobile : imageAnime}
             src={rightProject.image}
             alt={rightProject.name}
           />

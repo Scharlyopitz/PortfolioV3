@@ -24,6 +24,8 @@ export default function App() {
 
   const [loader, setLoader] = useState(true);
 
+  const [mobile, setMobile] = useState(false);
+
   useEffect(() => {
     if (loader) {
       document.body.style.overflow = "hidden";
@@ -40,6 +42,11 @@ export default function App() {
   }, [pathname]);
 
   useEffect(() => {
+    if (window.innerWidth < 1025) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
     // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP
 
     if (!clickedProject) {
@@ -73,6 +80,7 @@ export default function App() {
                 animateTransiViaAbout={animateTransiViaAbout}
                 about={about}
                 loader={loader}
+                mobile={mobile}
               />
             }
           />
@@ -86,6 +94,7 @@ export default function App() {
                 setHovered={setHovered}
                 setClickedProject={setClickedProject}
                 loader={loader}
+                mobile={mobile}
               />
             }
           />
@@ -96,7 +105,7 @@ export default function App() {
         </Routes>
       </AnimatePresence>
       <Counter loader={loader} />
-      {loader && <Loader setLoader={setLoader} />}
+      {loader && <Loader setLoader={setLoader} mobile={mobile} />}
     </>
   );
 }

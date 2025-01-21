@@ -64,9 +64,11 @@ export default function Apropos({ setHovered, loader }) {
 
   const navigate = useNavigate();
 
-  if (loader) {
-    navigate("/");
-  }
+  useEffect(() => {
+    if (loader) {
+      navigate("/");
+    }
+  }, [loader]);
 
   return (
     <m.main

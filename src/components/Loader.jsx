@@ -10,7 +10,7 @@ import Projets from "../assets/Projets.json";
 import { motion as m } from "motion/react";
 import Background from "./Background";
 
-export default function Loader({ setLoader }) {
+export default function Loader({ setLoader, mobile }) {
   const { pathname } = useLocation();
 
   const findProjet = Projets.find((p) => `/${p.linkPath}` === pathname);
@@ -43,9 +43,11 @@ export default function Loader({ setLoader }) {
   const animeLoader = {
     initial: {
       y: `${calculTranslateInitial}%`,
+      filter: "brightness(1)",
     },
     animate: {
       y: `-${calculTranslateAnimate}%`,
+      filter: mobile ? "brightness(0.6)" : "brightness(1)",
       transition: {
         duration: 2.25,
         ease: [0.65, 0, 0.35, 1],

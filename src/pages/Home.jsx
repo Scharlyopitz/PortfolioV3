@@ -8,9 +8,10 @@ export default function Home({
   animateTransiViaAbout,
   about,
   loader,
+  mobile,
 }) {
   useEffect(() => {
-    window.scrollTo({ top: window.innerHeight * clickedProject });
+    window.scrollTo({ top: (window.innerHeight + 0.5) * clickedProject });
   }, [clickedProject]);
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function Home({
         animateTransiViaAbout={animateTransiViaAbout}
         about={about}
         loader={loader}
+        mobile={mobile}
       />
     </main>
   );

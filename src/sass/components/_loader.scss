@@ -42,3 +42,20 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .Loader {
+    .content {
+      .hidden {
+        .image {
+          clip-path: none;
+          width: 100%;
+
+          img {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}

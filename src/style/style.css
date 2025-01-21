@@ -135,7 +135,7 @@ nav .AboutBtn:hover::before {
 .Projet {
   position: relative;
   display: flex;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 .Projet:hover {
@@ -284,7 +284,7 @@ nav .AboutBtn:hover::before {
   }
 }
 #Projet {
-  height: 100vh;
+  height: 100dvh;
 }
 #Projet .Projet {
   position: fixed;

@@ -244,13 +244,7 @@ export default function Projet({
   };
 
   return (
-    <m.main
-      style={{ height: `${100 * Projets.length}vh` }}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      id="Projet"
-    >
+    <m.main initial="initial" animate="animate" exit="exit" id="Projet">
       <TitlePage title={rightProject.name} />
       <div
         onClick={() => history.back()}

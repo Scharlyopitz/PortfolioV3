@@ -72,7 +72,6 @@ export default function Apropos({ setHovered, loader }) {
 
   return (
     <m.main
-      style={{ height: `${100 * Projets.length}vh` }}
       onClick={() => history.back()}
       initial="initial"
       animate="animate"

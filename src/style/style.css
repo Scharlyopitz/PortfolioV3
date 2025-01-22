@@ -409,6 +409,9 @@ nav .AboutBtn:hover::before {
     font-size: 18px;
   }
 }
+#Apropos {
+  height: 100vh;
+}
 #Apropos:hover {
   cursor: pointer;
 }

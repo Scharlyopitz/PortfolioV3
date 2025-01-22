@@ -143,12 +143,13 @@ function Projet({ projet, index, loader, mobile }) {
         variants={mobile ? mobileTransi : containerImageLoader}
         className="image"
       >
-        <m.img
+        <m.picture
           style={{ translateY: mobile ? 0 : y }}
           variants={mobile ? mobileImageTransi : imageLoader}
-          src={projet.image}
-          alt={projet.name}
-        />
+        >
+          <source srcSet={projet.images.w440} media="(max-width: 440px)" />
+          <img src={projet.images.w1440} alt={projet.name} />
+        </m.picture>
       </m.div>
       <m.div variants={titleForLoader} className="titleContainer">
         <m.div ref={titleRef} className="title hidden">

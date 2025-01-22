@@ -4,7 +4,10 @@
     "name": "Wilhelm Opitz",
     "linkPath": "wilhelm-opitz",
     "rightTemplate": false,
-    "image": "/WilhelmPortrait.webp",
+    "images": {
+      "w440": "/WilhelmPortrait-440.webp",
+      "w1440": "/WilhelmPortrait-1440.webp"
+    },
     "description": "Wilhelm Opitz - Portfolio d'un graphiste avec ReactJS, framer motion et emailJS pour l'envoie du formulaire de contact. Responsive design pour l'adaptation sur tout les écran et optimisation des images pour la fluidité du site ( compression des images et mise au format webp ).",
     "lien": "https://wilhelmopitz.netlify.app/"
   },
@@ -13,7 +16,10 @@
     "name": "Booki",
     "linkPath": "booki",
     "rightTemplate": true,
-    "image": "/Booki.webp",
+    "images": {
+      "w440": "/Booki-440.webp",
+      "w1440": "/Booki-1440.webp"
+    },
     "description": "Booki - un projet de formation réalisé à Openclassrooms afin d'apprendre le Html/css. Le but, développer la page d'accueil d'une agence de voyage avec HTML & CSS et faire en sorte que la page soit responsive.",
     "lien": "https://scharlyopitz.github.io/Projet-Booki/"
   },
@@ -22,7 +28,10 @@
     "name": "OhmyFood",
     "linkPath": "ohmyfood",
     "rightTemplate": false,
-    "image": "/Ohmyfood.webp",
+    "images": {
+      "w440": "/Ohmyfood-440.webp",
+      "w1440": "/Ohmyfood-1440.webp"
+    },
     "description": "OhMyFood - un projet de formation réalisé à OpenClassrooms afin d’apprendre les animations CSS. Basé sur une maquette Figma en mobile first, j’ai intégré une page d’accueil, quatre pages de menu de restaurants et un loader.",
     "lien": "https://scharlyopitz.github.io/Ohmyfood/"
   },
@@ -31,7 +40,10 @@
     "name": "Sophie Bluel",
     "linkPath": "sophie-bluel",
     "rightTemplate": true,
-    "image": "/SophieBluel.webp",
+    "images": {
+      "w440": "/SophieBluel-440.webp",
+      "w1440": "/SophieBluel-1440.webp"
+    },
     "description": "Sophie Bluel - un projet de formation réalisé à OpenClassrooms afin d’apprendre le JavaScript. Basé sur une maquette Figma, j’ai intégré une page de connexion et affiché dynamiquement depuis une API les travaux dans le portfolio. L’intégration d’une modale était également demandée afin d’ajouter ou encore de supprimer des travaux en tant qu’administrateur du site.",
     "lien": "https://github.com/Scharlyopitz/Projet-6-Creez-une-page-web-dynamique-avec-JavaScript"
   },
@@ -40,7 +52,10 @@
     "name": "Kasa",
     "linkPath": "kasa",
     "rightTemplate": false,
-    "image": "/Kasa.webp",
+    "images": {
+      "w440": "/Kasa-440.webp",
+      "w1440": "/Kasa-1440.webp"
+    },
     "description": "Kasa - un projet de formation réalisé à Openclassrooms afin d'apprendre ReactJS. Le but, créer une application web de location immobilière, j'ai utilisé nodeJs côté backend pour prendre les informations et les ajoutés pour chaque logements et utilisé des composents réutilisables.",
     "lien": "https://github.com/Scharlyopitz/Projet-Kasa-OpenClassroom"
   },
@@ -49,7 +64,10 @@
     "name": "Nina Carducci",
     "linkPath": "nina-carducci",
     "rightTemplate": true,
-    "image": "/Projet9.webp",
+    "images": {
+      "w440": "/Projet9-440.webp",
+      "w1440": "/Projet9-1440.webp"
+    },
     "description": "Ninna Carducci - un projet de formation réalisé à OpenClassrooms afin d’apprendre le SEO. J'ai optimisé le référencement d'un site de photographe en bonifiant les images, ajouté une balise meta description et réseaux sociaux, minifié le liens JS et CSS etc. Avec l'utilisation de Google lighthouse.",
     "lien": "https://scharlyopitz.github.io/Projet-SEO-OpenClassrooms/"
   }

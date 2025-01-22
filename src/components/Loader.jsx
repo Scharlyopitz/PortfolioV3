@@ -1,9 +1,15 @@
-import Wilhelm from "/WilhelmPortrait.webp";
-import Booki from "/Booki.webp";
-import Kasa from "/Kasa.webp";
-import Ohmyfood from "/Ohmyfood.webp";
-import SophieBluel from "/SophieBluel.webp";
-import Projet9 from "/Projet9.webp";
+import Wilhelm440 from "/WilhelmPortrait-440.webp";
+import Wilhelm from "/WilhelmPortrait-1440.webp";
+import Booki440 from "/Booki-440.webp";
+import Booki from "/Booki-1440.webp";
+import Kasa440 from "/Kasa-440.webp";
+import Kasa from "/Kasa-1440.webp";
+import Ohmyfood440 from "/Ohmyfood-440.webp";
+import Ohmyfood from "/Ohmyfood-1440.webp";
+import SophieBluel440 from "/SophieBluel-440.webp";
+import SophieBluel from "/SophieBluel-1440.webp";
+import Projet9440 from "/Projet9-440.webp";
+import Projet9 from "/Projet9-1440.webp";
 import { useLocation } from "react-router-dom";
 import Projets from "../assets/Projets.json";
 
@@ -17,22 +23,24 @@ export default function Loader({ setLoader, mobile }) {
 
   const template = findProjet?.rightTemplate;
 
+  const width440 = window.innerWidth < 440;
+
   const rightImage = {
-    "/": Wilhelm,
-    "/wilhelm-opitz": Wilhelm,
-    "/booki": Booki,
-    "/ohmyfood": Ohmyfood,
-    "/sophie-bluel": SophieBluel,
-    "/kasa": Kasa,
-    "/nina-carducci": Projet9,
+    "/": width440 ? Wilhelm440 : Wilhelm,
+    "/wilhelm-opitz": width440 ? Wilhelm440 : Wilhelm,
+    "/booki": width440 ? Booki440 : Booki,
+    "/ohmyfood": width440 ? Ohmyfood440 : Ohmyfood,
+    "/sophie-bluel": width440 ? SophieBluel440 : SophieBluel,
+    "/kasa": width440 ? Kasa440 : Kasa,
+    "/nina-carducci": width440 ? Projet9440 : Projet9,
   };
 
   const images = [
-    { src: Wilhelm },
-    { src: Booki },
-    { src: Ohmyfood },
-    { src: Booki },
-    { src: Ohmyfood },
+    { src: width440 ? Wilhelm440 : Wilhelm },
+    { src: width440 ? Booki440 : Booki },
+    { src: width440 ? Ohmyfood440 : Ohmyfood },
+    { src: width440 ? Booki440 : Booki },
+    { src: width440 ? Ohmyfood440 : Ohmyfood },
     { src: rightImage[pathname] },
   ];
 

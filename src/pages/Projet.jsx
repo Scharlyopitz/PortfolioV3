@@ -254,11 +254,13 @@ export default function Projet({
           variants={mobile ? imageContainerMobile : imageContainerAnime}
           className="image"
         >
-          <m.img
-            variants={mobile ? imageAnimeMobile : imageAnime}
-            src={rightProject.image}
-            alt={rightProject.name}
-          />
+          <m.picture variants={mobile ? imageAnimeMobile : imageAnime}>
+            <source
+              srcSet={rightProject.images.w440}
+              media="(max-width: 440px)"
+            />
+            <img src={rightProject.images.w1440} alt={rightProject.name} />
+          </m.picture>
         </m.div>
         <m.div variants={staggerIndex} className="index hidden">
           <m.span variants={indexAnime}>index</m.span>

@@ -128,8 +128,15 @@ nav .AboutBtn:hover::before {
   nav .logoContainer {
     width: 45px;
   }
-  nav .AboutBtn {
+  nav .AboutBtn,
+  nav .AboutBtn::before,
+  nav .AboutBtn::after {
     font-size: 16px;
+  }
+}
+@media (max-width: 440px) {
+  nav .AboutBtn::before, nav .AboutBtn::after {
+    display: none;
   }
 }
 .Projet {

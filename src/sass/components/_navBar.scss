@@ -77,8 +77,21 @@ nav {
     .logoContainer {
       width: 45px;
     }
-    .AboutBtn {
+    .AboutBtn,
+    .AboutBtn::before,
+    .AboutBtn::after {
       font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  nav {
+    .AboutBtn {
+      &::before,
+      &::after {
+        display: none;
+      }
     }
   }
 }

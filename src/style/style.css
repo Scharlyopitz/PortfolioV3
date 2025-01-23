@@ -154,14 +154,9 @@ nav .AboutBtn:hover::before {
 .Projet:nth-child(even) .title {
   flex-direction: row-reverse;
 }
-.Projet:nth-child(odd) .titleContainer {
-  left: auto;
-  right: 0;
-}
 .Projet .titleContainer {
-  position: absolute;
-  left: 0;
-  bottom: 1dvh;
+  display: flex;
+  align-items: end;
   width: 50%;
   padding: 1vw 2vw;
 }
@@ -368,13 +363,10 @@ nav .AboutBtn:hover::before {
 #Projet .right {
   flex-direction: row-reverse;
 }
-#Projet .right .titleContainer {
-  left: 0;
-}
-#Projet .right .titleContainer .title {
+#Projet .right .title {
   flex-direction: row-reverse;
 }
-#Projet .right .titleContainer .title .numberContainer {
+#Projet .right .title .numberContainer {
   left: auto !important;
   right: 0;
 }

@@ -156,14 +156,14 @@ function Projet({ projet, index, loader, mobile }) {
           <m.h1
             initial="show"
             animate={isInView ? "show" : "hidden"}
-            variants={titleAnime}
+            variants={!mobile && titleAnime}
           >
             0{index + 1}
           </m.h1>
           <m.h1
             initial="show"
             animate={isInView ? "show" : "hidden"}
-            variants={titleAnime}
+            variants={!mobile && titleAnime}
           >
             {projet.name}
           </m.h1>

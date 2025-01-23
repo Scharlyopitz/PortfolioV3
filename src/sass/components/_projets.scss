@@ -1,9 +1,8 @@
 .Projet {
   position: relative;
   display: flex;
-  height: 100dvh;
+  height: 100svh;
   overflow: hidden;
-  transition: height 0.3s;
 
   &:hover {
     cursor: pointer;

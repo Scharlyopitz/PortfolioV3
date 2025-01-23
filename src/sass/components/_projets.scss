@@ -15,10 +15,19 @@
       flex-direction: row-reverse;
     }
   }
+  &:nth-child(odd) {
+    .titleContainer {
+      left: auto;
+      right: 0;
+    }
+  }
 
   .titleContainer {
-    display: flex;
-    align-items: end;
+    // display: flex;
+    // align-items: end;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 50%;
     padding: 1vw 2vw;
 

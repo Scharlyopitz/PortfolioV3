@@ -81,12 +81,15 @@
   .right {
     flex-direction: row-reverse;
 
-    .title {
-      flex-direction: row-reverse;
+    .titleContainer {
+      left: 0;
+      .title {
+        flex-direction: row-reverse;
 
-      .numberContainer {
-        left: auto !important;
-        right: 0;
+        .numberContainer {
+          left: auto !important;
+          right: 0;
+        }
       }
     }
 

@@ -22,9 +22,12 @@ export default function NavBar({ setAbout, setHovered, loader }) {
   const buttonAnimation = {
     initial: {
       y: "105%",
+      opacity: 0,
+      willChange: "transform",
     },
     animate: {
       y: "0%",
+      opacity: 1,
       transition: {
         duration: 0.9,
         delay: loader ? 2.25 : 0.8,
@@ -33,6 +36,7 @@ export default function NavBar({ setAbout, setHovered, loader }) {
     },
     exit: {
       y: "105%",
+      opacity: 0,
       transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
     },
   };

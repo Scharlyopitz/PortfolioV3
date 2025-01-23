@@ -173,7 +173,7 @@ nav .AboutBtn:hover::before {
 }
 .Projet .image {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -270,7 +270,7 @@ nav .AboutBtn:hover::before {
   justify-content: end;
 }
 .Loader .content .hidden .image {
-  height: 100vh;
+  height: 100dvh;
   width: 50%;
   -webkit-clip-path: polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%);
           clip-path: polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%);

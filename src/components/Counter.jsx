@@ -12,7 +12,7 @@ export default function Counter({ loader }) {
       willChange: "transform",
     },
     animate: {
-      y: "calc(-50vh + 20px + 1vw)",
+      y: "calc(-50svh + 20px + 1vw)",
 
       transition: { duration: 2.25, ease: [0.65, 0, 0.35, 1] },
     },

@@ -9,6 +9,7 @@ export default function Counter({ loader }) {
     initial: {
       y: 0,
       x: "-50%",
+      willChange: "transform",
     },
     animate: {
       y: "calc(-50vh + 20px + 1vw)",
@@ -20,6 +21,7 @@ export default function Counter({ loader }) {
   const exitNumber = {
     initial: {
       y: 0,
+      willChange: "transform",
     },
     exit: {
       y: "-105%",

@@ -12,6 +12,7 @@ export default function Projets({
   const pageTransi = {
     initial: {
       opacity: animateTransiViaAbout ? 0 : 1,
+      willChange: "opacity",
     },
     animate: {
       opacity: 1,

@@ -52,6 +52,7 @@ export default function Loader({ setLoader, mobile }) {
     initial: {
       y: `${calculTranslateInitial}%`,
       filter: "brightness(1)",
+      willChange: "transform",
     },
     animate: {
       y: `-${calculTranslateAnimate}%`,

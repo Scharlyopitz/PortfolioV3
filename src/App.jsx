@@ -37,11 +37,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (loader) {
-      StopScroll();
-    } else {
-      RunScroll();
-    }
+    loader ? StopScroll() : RunScroll();
   }, [loader]);
 
   useEffect(() => {

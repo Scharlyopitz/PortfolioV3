@@ -26,13 +26,21 @@ export default function App() {
 
   const [mobile, setMobile] = useState(false);
 
+  function StopScroll() {
+    document.body.style.overflow = "hidden";
+    document.body.setAttribute("data-lenis-prevent", "true");
+  }
+
+  function RunScroll() {
+    document.body.style.overflow = "auto";
+    document.body.removeAttribute("data-lenis-prevent", "true");
+  }
+
   useEffect(() => {
     if (loader) {
-      document.body.style.overflow = "hidden";
-      document.body.setAttribute("data-lenis-prevent", "true");
+      StopScroll();
     } else {
-      document.body.style.overflow = "auto";
-      document.body.removeAttribute("data-lenis-prevent", "true");
+      RunScroll();
     }
   }, [loader]);
 

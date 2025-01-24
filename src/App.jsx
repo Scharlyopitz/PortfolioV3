@@ -36,6 +36,10 @@ export default function App() {
     document.body.removeAttribute("data-lenis-prevent", "true");
   }
 
+  function ScrollRestoration() {
+    history.scrollRestoration = "manual";
+  }
+
   useEffect(() => {
     loader ? StopScroll() : RunScroll();
   }, [loader]);
@@ -46,16 +50,11 @@ export default function App() {
   }, [pathname]);
 
   useEffect(() => {
-    if (window.innerWidth < 1025) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
+    window.innerWidth < 1025 ? setMobile(true) : setMobile(false);
+
     // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP
 
-    if (!clickedProject) {
-      history.scrollRestoration = "manual";
-    }
+    !clickedProject && ScrollRestoration();
 
     const lenis = new Lenis();
 

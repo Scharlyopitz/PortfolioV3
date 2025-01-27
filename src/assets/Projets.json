@@ -8,7 +8,7 @@
       "w440": "/WilhelmPortrait-440.webp",
       "w1440": "/WilhelmPortrait-1440.webp"
     },
-    "description": "Wilhelm Opitz - Portfolio d'un graphiste avec ReactJS, framer motion et emailJS pour l'envoie du formulaire de contact. Responsive design pour l'adaptation sur tout les écran et optimisation des images pour la fluidité du site ( compression des images et mise au format webp ).",
+    "description": "Wilhelm Opitz - Portfolio d'un graphiste avec ReactJS, framer motion et emailJS pour l'envoie du formulaire de contact. Responsive design pour l'adaptation sur tout les écrans et optimisation des images pour la fluidité du site ( compression des images et mise au format webp ).",
     "lien": "https://wilhelmopitz.netlify.app/"
   },
   {
@@ -32,7 +32,7 @@
       "w440": "/Ohmyfood-440.webp",
       "w1440": "/Ohmyfood-1440.webp"
     },
-    "description": "OhMyFood - un projet de formation réalisé à OpenClassrooms afin d’apprendre les animations CSS. Basé sur une maquette Figma en mobile first, j’ai intégré une page d’accueil, quatre pages de menu de restaurants et un loader.",
+    "description": "OhMyFood - un projet de formation réalisé à OpenClassrooms afin d’apprendre les animations CSS. Basé sur une maquette Figma en mobile first, j’ai intégré une page d’accueil et quatre pages de menu de restaurants et un loader.",
     "lien": "https://scharlyopitz.github.io/Ohmyfood/"
   },
   {

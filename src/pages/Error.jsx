@@ -6,7 +6,7 @@ export default function Error() {
   return (
     <main>
       <TitlePage title="404 Not Found" />
-      <Link>Retour à l'accueil</Link>
+      <Link to={"/"}>Retour à l'accueil</Link>
     </main>
   );
 }

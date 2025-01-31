@@ -5,6 +5,7 @@ import TitlePage from "../components/TitlePage";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion as m } from "motion/react";
+import Error from "./Error";
 
 export default function Projet({
   about,
@@ -18,6 +19,10 @@ export default function Projet({
   const { projet } = useParams();
 
   const rightProject = Projets.find((p) => p.linkPath === projet);
+
+  if (!rightProject) {
+    return <Error />;
+  }
 
   useEffect(() => {
     setClickedProject(rightProject.id - 1);

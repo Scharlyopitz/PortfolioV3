@@ -294,6 +294,138 @@ nav .AboutBtn:hover::before {
     transform: scale(1);
   }
 }
+#Apropos {
+  height: 100vh;
+}
+#Apropos:hover {
+  cursor: pointer;
+}
+#Apropos .descriptionContainer {
+  position: fixed;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 30px 2vw 0 36%;
+}
+#Apropos .descriptionContainer p {
+  font-size: 1.5vw;
+}
+#Apropos .contactContainer {
+  position: fixed;
+  left: 36%;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 62%;
+}
+#Apropos .contactContainer .left {
+  display: flex;
+  gap: 2vw;
+}
+#Apropos .contactContainer .left a {
+  position: relative;
+  z-index: 5;
+  text-transform: uppercase;
+  font-size: 1.1vw;
+  padding: 1vw;
+}
+#Apropos .contactContainer .left a::before, #Apropos .contactContainer .left a::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.3s;
+  font-size: 1.1vw;
+  will-change: transform;
+}
+#Apropos .contactContainer .left a::before, #Apropos .contactContainer .left a::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.3s;
+  font-size: 1.1vw;
+  will-change: transform;
+}
+#Apropos .contactContainer .left a::before {
+  content: "(";
+  left: 0;
+}
+#Apropos .contactContainer .left a::after {
+  content: ")";
+  right: 0;
+}
+#Apropos .contactContainer .left a:hover {
+  cursor: pointer;
+}
+#Apropos .contactContainer .left a:hover::after {
+  transform: translate(-100%, -50%);
+  opacity: 1;
+}
+#Apropos .contactContainer .left a:hover::before {
+  opacity: 1;
+  transform: translate(100%, -50%);
+}
+
+@media (max-width: 1024px) {
+  #Apropos p,
+  #Apropos .descriptionContainer p,
+  #Apropos .contactContainer .left a,
+  #Apropos .contactContainer .left a::before,
+  #Apropos .contactContainer .left a::after {
+    font-size: 3vw;
+  }
+  #Apropos .descriptionContainer {
+    top: 15vh;
+    padding: 0 2vw 0 5vw;
+  }
+  #Apropos .contactContainer {
+    left: 5vw;
+    width: 90%;
+  }
+  #Apropos .contactContainer .left a {
+    padding: 3vw;
+  }
+}
+@media (max-width: 440px) {
+  #Apropos .descriptionContainer p {
+    font-size: 20px;
+  }
+  #Apropos p,
+  #Apropos .contactContainer .left a {
+    font-size: 18px;
+  }
+  #Apropos .contactContainer .left a::before,
+  #Apropos .contactContainer .left a::after {
+    display: none;
+  }
+  #Apropos .descriptionContainer {
+    padding: 0 5vw;
+  }
+  #Apropos .contactContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 5vw;
+    width: 90%;
+  }
+  #Apropos .contactContainer .left {
+    flex-direction: column;
+  }
+  #Apropos .contactContainer .left a {
+    padding: 0;
+  }
+}
+#Error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-transform: uppercase;
+}
+
 #Projet {
   height: 100svh;
 }
@@ -418,130 +550,6 @@ nav .AboutBtn:hover::before {
   }
   #Projet .Projet .description p {
     font-size: 18px;
-  }
-}
-#Apropos {
-  height: 100vh;
-}
-#Apropos:hover {
-  cursor: pointer;
-}
-#Apropos .descriptionContainer {
-  position: fixed;
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-  padding: 30px 2vw 0 36%;
-}
-#Apropos .descriptionContainer p {
-  font-size: 1.5vw;
-}
-#Apropos .contactContainer {
-  position: fixed;
-  left: 36%;
-  bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  width: 62%;
-}
-#Apropos .contactContainer .left {
-  display: flex;
-  gap: 2vw;
-}
-#Apropos .contactContainer .left a {
-  position: relative;
-  z-index: 5;
-  text-transform: uppercase;
-  font-size: 1.1vw;
-  padding: 1vw;
-}
-#Apropos .contactContainer .left a::before, #Apropos .contactContainer .left a::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: 0.3s;
-  font-size: 1.1vw;
-  will-change: transform;
-}
-#Apropos .contactContainer .left a::before, #Apropos .contactContainer .left a::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: 0.3s;
-  font-size: 1.1vw;
-  will-change: transform;
-}
-#Apropos .contactContainer .left a::before {
-  content: "(";
-  left: 0;
-}
-#Apropos .contactContainer .left a::after {
-  content: ")";
-  right: 0;
-}
-#Apropos .contactContainer .left a:hover {
-  cursor: pointer;
-}
-#Apropos .contactContainer .left a:hover::after {
-  transform: translate(-100%, -50%);
-  opacity: 1;
-}
-#Apropos .contactContainer .left a:hover::before {
-  opacity: 1;
-  transform: translate(100%, -50%);
-}
-
-@media (max-width: 1024px) {
-  #Apropos p,
-  #Apropos .descriptionContainer p,
-  #Apropos .contactContainer .left a,
-  #Apropos .contactContainer .left a::before,
-  #Apropos .contactContainer .left a::after {
-    font-size: 3vw;
-  }
-  #Apropos .descriptionContainer {
-    top: 15vh;
-    padding: 0 2vw 0 5vw;
-  }
-  #Apropos .contactContainer {
-    left: 5vw;
-    width: 90%;
-  }
-  #Apropos .contactContainer .left a {
-    padding: 3vw;
-  }
-}
-@media (max-width: 440px) {
-  #Apropos .descriptionContainer p {
-    font-size: 20px;
-  }
-  #Apropos p,
-  #Apropos .contactContainer .left a {
-    font-size: 18px;
-  }
-  #Apropos .contactContainer .left a::before,
-  #Apropos .contactContainer .left a::after {
-    display: none;
-  }
-  #Apropos .descriptionContainer {
-    padding: 0 5vw;
-  }
-  #Apropos .contactContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    left: 5vw;
-    width: 90%;
-  }
-  #Apropos .contactContainer .left {
-    flex-direction: column;
-  }
-  #Apropos .contactContainer .left a {
-    padding: 0;
   }
 }
 .Cursor {

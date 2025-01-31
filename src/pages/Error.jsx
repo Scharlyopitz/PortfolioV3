@@ -4,7 +4,7 @@ import TitlePage from "../components/TitlePage";
 
 export default function Error() {
   return (
-    <main>
+    <main id="Error">
       <TitlePage title="404 Not Found" />
       <Link to={"/"}>Retour à l'accueil</Link>
     </main>

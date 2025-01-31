@@ -106,8 +106,8 @@ export default function App() {
             path="/apropos"
             element={<Apropos setHovered={setHovered} loader={loader} />}
           />
+          <Route path="*" element={<Error />} />
         </Routes>
-        <Route path="*" element={<Error />} />
       </AnimatePresence>
       <Counter loader={loader} />
       {loader && <Loader setLoader={setLoader} mobile={mobile} />}

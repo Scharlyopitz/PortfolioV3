@@ -1,5 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import TitlePage from "../components/TitlePage";
 
 export default function Error() {
-  return <div>Error</div>;
+  return (
+    <main>
+      <TitlePage title="404 Not Found" />
+      <Link>Retour à l'accueil</Link>
+    </main>
+  );
 }

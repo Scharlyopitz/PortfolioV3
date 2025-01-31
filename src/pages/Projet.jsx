@@ -5,7 +5,7 @@ import TitlePage from "../components/TitlePage";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion as m } from "motion/react";
-import Error from "./Error";
+import Redirect from "./Redirect";
 
 export default function Projet({
   about,
@@ -21,7 +21,7 @@ export default function Projet({
   const rightProject = Projets.find((p) => p.linkPath === projet);
 
   if (!rightProject) {
-    return <Error />;
+    return <Redirect />;
   }
 
   useEffect(() => {

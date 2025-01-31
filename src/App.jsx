@@ -10,7 +10,7 @@ import { AnimatePresence } from "motion/react";
 import Cursor from "./utils/Cursor";
 import Loader from "./components/Loader";
 import Counter from "./components/Counter";
-import Error from "./pages/Error";
+import Redirect from "./pages/Redirect";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -106,7 +106,8 @@ export default function App() {
             path="/apropos"
             element={<Apropos setHovered={setHovered} loader={loader} />}
           />
-          <Route path="*" element={<Error />} />
+
+          <Route path="*" element={<Redirect />} />
         </Routes>
       </AnimatePresence>
       <Counter loader={loader} />

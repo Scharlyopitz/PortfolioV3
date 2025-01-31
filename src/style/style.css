@@ -418,14 +418,6 @@ nav .AboutBtn:hover::before {
     padding: 0;
   }
 }
-#Error {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-transform: uppercase;
-}
-
 #Projet {
   height: 100svh;
 }

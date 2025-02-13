@@ -28,11 +28,10 @@ export default function Projet({
     setClickedProject(rightProject.id - 1);
   }, []);
 
-  useEffect(() => {
+  animateTransiViaAbout &&
     setTimeout(() => {
       setanimateTransiViaAbout(false);
     }, 100);
-  }, [animateTransiViaAbout]);
 
   const titleAnime = {
     initial: {

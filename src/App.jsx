@@ -41,9 +41,7 @@ export default function App() {
     history.scrollRestoration = "manual";
   }
 
-  useEffect(() => {
-    loader ? StopScroll() : RunScroll();
-  }, [loader]);
+  loader ? StopScroll() : RunScroll();
 
   useEffect(() => {
     setAbout(false);

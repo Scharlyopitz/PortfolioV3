@@ -55,7 +55,17 @@ export default function App() {
 
     !clickedProject && ScrollRestoration();
 
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      duration: 2.3,
+      // easing: function (t) {
+      //   return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      // },
+      // direction: "vertical",
+      // gestureDirection: "vertical",
+      // smooth: true,
+      // smoothTouch: false,
+      // touchMultiplier: 2,
+    });
 
     function raf(time) {
       lenis.raf(time);

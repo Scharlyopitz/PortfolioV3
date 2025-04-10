@@ -39,12 +39,7 @@ export default function Counter({ loader }) {
   }, []);
 
   return (
-    <m.div
-      initial="initial"
-      animate="animate"
-      variants={numberAnime}
-      className="Counter hidden"
-    >
+    <m.div initial="initial" animate="animate" variants={numberAnime} className="Counter hidden">
       <AnimatePresence>
         {loader && (
           <m.div exit="exit" ref={ref} variants={exitNumber} className="number">

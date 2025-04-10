@@ -58,12 +58,12 @@ export default function App() {
     const lenis = new Lenis({
       // duration: 2.3,
       lerp: 0.045,
+      smooth: true,
       // easing: function (t) {
       //   return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
       // },
       // direction: "vertical",
       // gestureDirection: "vertical",
-      // smooth: true,
       // smoothTouch: false,
       // touchMultiplier: 2,
     });

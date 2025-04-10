@@ -56,7 +56,8 @@ export default function App() {
     !clickedProject && ScrollRestoration();
 
     const lenis = new Lenis({
-      duration: 2.3,
+      // duration: 2.3,
+      lerp: 0.045,
       // easing: function (t) {
       //   return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
       // },
@@ -86,14 +87,7 @@ export default function App() {
           <Route
             path="/"
             element={
-              <Home
-                setanimateTransiViaAbout={setanimateTransiViaAbout}
-                clickedProject={clickedProject}
-                animateTransiViaAbout={animateTransiViaAbout}
-                about={about}
-                loader={loader}
-                mobile={mobile}
-              />
+              <Home setanimateTransiViaAbout={setanimateTransiViaAbout} clickedProject={clickedProject} animateTransiViaAbout={animateTransiViaAbout} about={about} loader={loader} mobile={mobile} />
             }
           />
           <Route
@@ -110,10 +104,7 @@ export default function App() {
               />
             }
           />
-          <Route
-            path="/apropos"
-            element={<Apropos setHovered={setHovered} loader={loader} />}
-          />
+          <Route path="/apropos" element={<Apropos setHovered={setHovered} loader={loader} />} />
 
           <Route path="*" element={<Redirect />} />
         </Routes>

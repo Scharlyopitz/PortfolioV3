@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
@@ -27,21 +27,7 @@ export default function App() {
 
   const [mobile, setMobile] = useState(false);
 
-  function StopScroll() {
-    document.body.style.overflow = "hidden";
-    document.body.setAttribute("data-lenis-prevent", "true");
-  }
-
-  function RunScroll() {
-    document.body.style.overflow = "auto";
-    document.body.removeAttribute("data-lenis-prevent", "true");
-  }
-
-  function ScrollRestoration() {
-    history.scrollRestoration = "manual";
-  }
-
-  loader ? StopScroll() : RunScroll();
+  const lenisRef = useRef(null);
 
   useEffect(() => {
     setAbout(false);
@@ -51,14 +37,11 @@ export default function App() {
   useEffect(() => {
     window.innerWidth < 1025 ? setMobile(true) : setMobile(false);
 
-    // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP
-
-    !clickedProject && ScrollRestoration();
-
     const lenis = new Lenis({
       lerp: 0.045,
       smooth: true,
     });
+    lenisRef.current = lenis;
 
     function raf(time) {
       lenis.raf(time);
@@ -66,7 +49,17 @@ export default function App() {
     }
 
     requestAnimationFrame(raf);
+
+    return () => lenis.destroy();
   }, []);
+
+  useEffect(() => {
+    if (lenisRef.current) {
+      const lenis = lenisRef.current;
+
+      loader ? lenis.stop() : lenis.start();
+    }
+  }, [loader]);
 
   return (
     <>

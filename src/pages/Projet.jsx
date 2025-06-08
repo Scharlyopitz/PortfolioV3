@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Projets from "../assets/Projets.json";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import TitlePage from "../components/TitlePage";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +9,8 @@ import Redirect from "./Redirect";
 
 export default function Projet({ about, animateTransiViaAbout, setanimateTransiViaAbout, setHovered, setClickedProject, loader, mobile }) {
   const { projet } = useParams();
+
+  const navigate = useNavigate();
 
   const rightProject = Projets.find((p) => p.linkPath === projet);
 
@@ -235,16 +237,23 @@ export default function Projet({ about, animateTransiViaAbout, setanimateTransiV
     },
   };
 
+  // Lock pour eviter les clicks multiples
   const [locked, setLocked] = useState(false);
 
   const handleClick = () => {
     if (locked) return;
     setLocked(true);
-    history.back();
+    navigate(-1);
+  };
+
+  const handleAnimationCompleted = (definition) => {
+    if (definition === "exit") {
+      setLocked(false);
+    }
   };
 
   return (
-    <m.main initial="initial" animate="animate" exit="exit" id="Projet">
+    <m.main onAnimationComplete={handleAnimationCompleted} initial="initial" animate="animate" exit="exit" id="Projet">
       <TitlePage title={rightProject.name} />
       <div onClick={handleClick} className={`Projet ${rightProject.rightTemplate && "right"}`}>
         <m.div variants={mobile ? imageContainerMobile : imageContainerAnime} className="image">

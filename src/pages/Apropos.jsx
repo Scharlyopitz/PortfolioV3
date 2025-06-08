@@ -2,8 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AproposData from "../assets/AproposData.json";
 import TitlePage from "../components/TitlePage";
 import { motion as m } from "motion/react";
-import Projets from "../assets/Projets.json";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Apropos({ setHovered, loader }) {
   const socials = [
@@ -68,14 +67,23 @@ export default function Apropos({ setHovered, loader }) {
     loader && navigate("/");
   }, [loader]);
 
+  // Lock pour eviter les clicks multiples
+  const [locked, setLocked] = useState(false);
+
+  const handleClick = () => {
+    if (locked) return;
+    setLocked(true);
+    navigate(-1);
+  };
+
+  const handleAnimationCompleted = (definition) => {
+    if (definition === "exit") {
+      setLocked(false);
+    }
+  };
+
   return (
-    <m.main
-      onClick={() => history.back()}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      id="Apropos"
-    >
+    <m.main onClick={handleClick} onAnimationComplete={handleAnimationCompleted} initial="initial" animate="animate" exit="exit" id="Apropos">
       <TitlePage title="A propos" />
       <div className="descriptionContainer">
         {AproposData[0].split(" ").map((word, i) => {
@@ -94,12 +102,7 @@ export default function Apropos({ setHovered, loader }) {
             return (
               <div key={i} className="hidden">
                 <m.div variants={contactAnime}>
-                  <Link
-                    onMouseEnter={() => setHovered(true)}
-                    onMouseLeave={() => setHovered(false)}
-                    to={link}
-                    target="_blank"
-                  >
+                  <Link onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} to={link} target="_blank">
                     {name}
                   </Link>
                 </m.div>

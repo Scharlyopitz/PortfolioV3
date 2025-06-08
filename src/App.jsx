@@ -29,6 +29,10 @@ export default function App() {
 
   const lenisRef = useRef(null);
 
+  const resetScroll = () => {
+    history.scrollRestoration = "manual";
+  };
+
   useEffect(() => {
     setAbout(false);
     pathname === "/apropos" && setanimateTransiViaAbout(true);
@@ -36,6 +40,8 @@ export default function App() {
 
   useEffect(() => {
     window.innerWidth < 1025 ? setMobile(true) : setMobile(false);
+
+    resetScroll();
 
     const lenis = new Lenis({
       lerp: 0.045,

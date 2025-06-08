@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Projets from "../assets/Projets.json";
 import { Link, useParams } from "react-router-dom";
 import TitlePage from "../components/TitlePage";
@@ -7,15 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion as m } from "motion/react";
 import Redirect from "./Redirect";
 
-export default function Projet({
-  about,
-  animateTransiViaAbout,
-  setanimateTransiViaAbout,
-  setHovered,
-  setClickedProject,
-  loader,
-  mobile,
-}) {
+export default function Projet({ about, animateTransiViaAbout, setanimateTransiViaAbout, setHovered, setClickedProject, loader, mobile }) {
   const { projet } = useParams();
 
   const rightProject = Projets.find((p) => p.linkPath === projet);
@@ -117,9 +109,7 @@ export default function Projet({
 
   const imageContainerAnime = {
     initial: {
-      clipPath: animateTransiViaAbout
-        ? "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)"
-        : "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      clipPath: animateTransiViaAbout ? "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)" : "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       opacity: animateTransiViaAbout ? 0 : 1,
       willChange: "clip-path",
     },
@@ -132,9 +122,7 @@ export default function Projet({
       },
     },
     exit: {
-      clipPath: about
-        ? "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)"
-        : "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      clipPath: about ? "polygon(12% 12%, 88% 12%, 88% 88%, 12% 88%)" : "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       transition: { duration: about ? 0.5 : 1, ease: [0.76, 0, 0.24, 1] },
     },
   };
@@ -247,22 +235,21 @@ export default function Projet({
     },
   };
 
+  const [locked, setLocked] = useState(false);
+
+  const handleClick = () => {
+    if (locked) return;
+    setLocked(true);
+    history.back();
+  };
+
   return (
     <m.main initial="initial" animate="animate" exit="exit" id="Projet">
       <TitlePage title={rightProject.name} />
-      <div
-        onClick={() => history.back()}
-        className={`Projet ${rightProject.rightTemplate && "right"}`}
-      >
-        <m.div
-          variants={mobile ? imageContainerMobile : imageContainerAnime}
-          className="image"
-        >
+      <div onClick={handleClick} className={`Projet ${rightProject.rightTemplate && "right"}`}>
+        <m.div variants={mobile ? imageContainerMobile : imageContainerAnime} className="image">
           <m.picture variants={mobile ? imageAnimeMobile : imageAnime}>
-            <source
-              srcSet={rightProject.images.w440}
-              media="(max-width: 440px)"
-            />
+            <source srcSet={rightProject.images.w440} media="(max-width: 440px)" />
             <img src={rightProject.images.w1440} alt={rightProject.name} />
           </m.picture>
         </m.div>
@@ -270,10 +257,7 @@ export default function Projet({
           <m.span variants={indexAnime}>index</m.span>
           <m.span variants={indexAnime}>/ 0{rightProject.id}</m.span>
         </m.div>
-        <m.div
-          variants={staggerDescription}
-          className={`description ${rightProject.rightTemplate && "right"}`}
-        >
+        <m.div variants={staggerDescription} className={`description ${rightProject.rightTemplate && "right"}`}>
           {rightProject.description.split(" ").map((word, i) => {
             return (
               <div key={i} className="hidden">
@@ -284,13 +268,7 @@ export default function Projet({
         </m.div>
         <div className="titleContainer">
           <div className="title">
-            <Link
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-              to={rightProject.lien}
-              target="_blank"
-              className="siteBtn hidden"
-            >
+            <Link onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} to={rightProject.lien} target="_blank" className="siteBtn hidden">
               <div className="hidden">
                 <m.span variants={buttonSiteAnime}>voir site</m.span>
               </div>

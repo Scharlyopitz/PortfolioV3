@@ -41,8 +41,6 @@ export default function App() {
   useEffect(() => {
     window.innerWidth < 1025 ? setMobile(true) : setMobile(false);
 
-    // resetScroll();
-
     const lenis = new Lenis({
       lerp: 0.045,
       smooth: true,
@@ -60,6 +58,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    resetScroll();
     if (lenisRef.current) {
       const lenis = lenisRef.current;
 

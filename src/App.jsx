@@ -41,7 +41,7 @@ export default function App() {
   useEffect(() => {
     window.innerWidth < 1025 ? setMobile(true) : setMobile(false);
 
-    resetScroll();
+    // resetScroll();
 
     const lenis = new Lenis({
       lerp: 0.045,
@@ -78,7 +78,15 @@ export default function App() {
           <Route
             path="/"
             element={
-              <Home setanimateTransiViaAbout={setanimateTransiViaAbout} clickedProject={clickedProject} animateTransiViaAbout={animateTransiViaAbout} about={about} loader={loader} mobile={mobile} />
+              <Home
+                lenisRef={lenisRef}
+                setanimateTransiViaAbout={setanimateTransiViaAbout}
+                clickedProject={clickedProject}
+                animateTransiViaAbout={animateTransiViaAbout}
+                about={about}
+                loader={loader}
+                mobile={mobile}
+              />
             }
           />
           <Route

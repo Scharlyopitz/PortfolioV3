@@ -2,17 +2,18 @@ import { useEffect } from "react";
 import Projets from "../components/Projets";
 import TitlePage from "../components/TitlePage";
 
-export default function Home({
-  setanimateTransiViaAbout,
-  clickedProject,
-  animateTransiViaAbout,
-  about,
-  loader,
-  mobile,
-}) {
+export default function Home({ lenisRef, setanimateTransiViaAbout, clickedProject, animateTransiViaAbout, about, loader, mobile }) {
   useEffect(() => {
-    window.scrollTo({ top: (window.innerHeight + 0.5) * clickedProject });
-  }, [clickedProject]);
+    const lenis = lenisRef.current;
+
+    if (!lenis) return;
+
+    lenis.stop();
+    window.scrollTo({ top: window.innerHeight * clickedProject });
+    setTimeout(() => {
+      lenis.start();
+    }, 200);
+  }, [clickedProject, lenisRef]);
 
   useEffect(() => {
     setanimateTransiViaAbout(false);
@@ -21,12 +22,7 @@ export default function Home({
   return (
     <main>
       <TitlePage title="Portfolio" />
-      <Projets
-        animateTransiViaAbout={animateTransiViaAbout}
-        about={about}
-        loader={loader}
-        mobile={mobile}
-      />
+      <Projets animateTransiViaAbout={animateTransiViaAbout} about={about} loader={loader} mobile={mobile} />
     </main>
   );
 }

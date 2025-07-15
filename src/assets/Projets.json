@@ -1,9 +1,21 @@
 [
   {
     "id": "1",
+    "name": "Kanti studio",
+    "linkPath": "kanti-studio",
+    "rightTemplate": false,
+    "images": {
+      "w440": "/Kanti-440.webp",
+      "w1440": "/Kanti-1440.webp"
+    },
+    "description": "Kanti Studio - Portfolio d'une graphiste avec ReactJS, framer motion et emailJS. Intégration de la maquette faite par celle ci pour en faire son portfolio en y ajoutant les animation demandé avec adaptation à tout les écrans.",
+    "lien": "https://kantistudio.fr/"
+  },
+  {
+    "id": "2",
     "name": "Wilhelm Opitz",
     "linkPath": "wilhelm-opitz",
-    "rightTemplate": false,
+    "rightTemplate": true,
     "images": {
       "w440": "/WilhelmPortrait-440.webp",
       "w1440": "/WilhelmPortrait-1440.webp"
@@ -12,10 +24,10 @@
     "lien": "https://wilhelmopitz.netlify.app/"
   },
   {
-    "id": "2",
+    "id": "3",
     "name": "Booki",
     "linkPath": "booki",
-    "rightTemplate": true,
+    "rightTemplate": false,
     "images": {
       "w440": "/Booki-440.webp",
       "w1440": "/Booki-1440.webp"
@@ -24,10 +36,10 @@
     "lien": "https://scharlyopitz.github.io/Projet-Booki/"
   },
   {
-    "id": "3",
+    "id": "4",
     "name": "OhmyFood",
     "linkPath": "ohmyfood",
-    "rightTemplate": false,
+    "rightTemplate": true,
     "images": {
       "w440": "/Ohmyfood-440.webp",
       "w1440": "/Ohmyfood-1440.webp"
@@ -36,10 +48,10 @@
     "lien": "https://scharlyopitz.github.io/Ohmyfood/"
   },
   {
-    "id": "4",
+    "id": "5",
     "name": "Sophie Bluel",
     "linkPath": "sophie-bluel",
-    "rightTemplate": true,
+    "rightTemplate": false,
     "images": {
       "w440": "/SophieBluel-440.webp",
       "w1440": "/SophieBluel-1440.webp"
@@ -48,10 +60,10 @@
     "lien": "https://github.com/Scharlyopitz/Projet-6-Creez-une-page-web-dynamique-avec-JavaScript"
   },
   {
-    "id": "5",
+    "id": "6",
     "name": "Kasa",
     "linkPath": "kasa",
-    "rightTemplate": false,
+    "rightTemplate": true,
     "images": {
       "w440": "/Kasa-440.webp",
       "w1440": "/Kasa-1440.webp"
@@ -60,10 +72,10 @@
     "lien": "https://github.com/Scharlyopitz/Projet-Kasa-OpenClassroom"
   },
   {
-    "id": "6",
+    "id": "7",
     "name": "Nina Carducci",
     "linkPath": "nina-carducci",
-    "rightTemplate": true,
+    "rightTemplate": false,
     "images": {
       "w440": "/Projet9-440.webp",
       "w1440": "/Projet9-1440.webp"

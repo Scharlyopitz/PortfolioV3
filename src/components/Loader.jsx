@@ -1,5 +1,7 @@
 import Wilhelm440 from "/WilhelmPortrait-440.webp";
 import Wilhelm from "/WilhelmPortrait-1440.webp";
+import Kanti from "/Kanti-1440.webp";
+import Kanti440 from "/Kanti-440.webp";
 import Booki440 from "/Booki-440.webp";
 import Booki from "/Booki-1440.webp";
 import Kasa440 from "/Kasa-440.webp";
@@ -26,7 +28,8 @@ export default function Loader({ setLoader, mobile }) {
   const width440 = window.innerWidth < 440;
 
   const rightImage = {
-    "/": width440 ? Wilhelm440 : Wilhelm,
+    "/": width440 ? Kanti440 : Kanti,
+    "/kanti-studio": width440 ? Kanti440 : Kanti,
     "/wilhelm-opitz": width440 ? Wilhelm440 : Wilhelm,
     "/booki": width440 ? Booki440 : Booki,
     "/ohmyfood": width440 ? Ohmyfood440 : Ohmyfood,
@@ -67,11 +70,7 @@ export default function Loader({ setLoader, mobile }) {
   return (
     <m.div initial="initial" animate="animate" className="Loader">
       <Background />
-      <m.div
-        variants={animeLoader}
-        onAnimationComplete={() => setLoader(false)}
-        className="content"
-      >
+      <m.div variants={animeLoader} onAnimationComplete={() => setLoader(false)} className="content">
         {images.map(({ src }, i) => {
           return (
             <div key={i} className={`hidden ${template && "rightTemplate"}`}>
